@@ -27,3 +27,4 @@ docs/nextwork/*.html
 
 # Dossier de travail pour les livres (zip décompressé, essais)
 temp/
+!/sources.txt

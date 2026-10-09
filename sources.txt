@@ -1,0 +1,27 @@
+# sources.txt — liste des sources à intégrer dans le second cerveau
+#
+# Une URL par ligne. Les lignes vides et celles qui commencent par # sont ignorées.
+# Traitement : ./pull_sources.py   (voir --help). Les sources déjà traitées sont
+# enregistrées dans sources.done.tsv et ignorées aux passages suivants.
+#
+# Types reconnus :
+#   - vidéo YouTube      https://youtu.be/<id>  ou  https://www.youtube.com/watch?v=<id>
+#   - playlist YouTube   https://www.youtube.com/playlist?list=<id>   (toutes les vidéos, les nouvelles seront
+#                        prises aux passages suivants)
+#   - chaîne YouTube     https://www.youtube.com/@<nom>/videos        (idem, attention au volume : utiliser
+#                        --max-new pour limiter)
+#   - livre              https://app.turath.io/book/<id>  ou  https://www.aljam3.com/<...>
+#                        -> enregistré pour conversion (pdf_to_md.py / txt_to_md.py), pas de téléchargement
+#                           automatique pour l'instant
+#
+# Option par ligne : ajouter  | matière=<nom de la matière>  pour renseigner meta.md, par exemple :
+#   https://youtu.be/mxWq9pEKBTs | matière=السيرة النبوية
+
+# --- Séances inaugurales (octobre 2026), déjà traitées à la main ---
+https://youtu.be/mxWq9pEKBTs
+https://youtu.be/7F8P5R9pWPs
+https://youtu.be/xLTmoZV9yF0
+
+# --- Livres ---
+https://app.turath.io/book/12031?page=1
+https://www.aljam3.com/34265/64857/1
