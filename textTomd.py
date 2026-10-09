@@ -51,8 +51,11 @@ def process_text_file(input_filepath, output_filepath):
     )
 
 
-# Execution du script
-input_file = "Mayyara_Mukhtasar.md"
-output_file = "Mayyara_Mukhtasar_Formatted.md"
-
-process_text_file(input_file, output_file)
+# Execution du script : textTomd.py <fichier.txt> [sortie.md] (defaut : <fichier>.md)
+if __name__ == "__main__":
+    import sys
+    if len(sys.argv) < 2:
+        sys.exit("Usage : textTomd.py <fichier.txt> [sortie.md]")
+    input_file = sys.argv[1]
+    output_file = sys.argv[2] if len(sys.argv) > 2 else os.path.splitext(input_file)[0] + ".md"
+    process_text_file(input_file, output_file)

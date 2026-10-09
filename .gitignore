@@ -24,3 +24,6 @@ docs/nextwork/*.html
 /*.zip
 /*.pdf
 /*.txt
+
+# Dossier de travail pour les livres (zip décompressé, essais)
+temp/
