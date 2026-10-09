@@ -13,10 +13,23 @@ YouTube ──grab_audio.sh──► audio/*.flac ──transcribe.py──► t
 
 | Script | Rôle |
 |---|---|
+| `pull_sources.py [--list] [--dry-run] [--max-new N] [--force URL]` | Lit `sources.txt` (vidéos, playlists, chaînes YouTube, livres), traite ce qui est nouveau en enchaînant les trois scripts ci-dessous, dépose le résultat dans `secondBrain/raw/` et tient le registre `sources.done.tsv`. |
 | `grab_audio.sh <id\|url>` | Télécharge l'audio en FLAC 16 kHz mono. Nom : `yyyy-mm-dd-hh-mm <titre> [<id>].flac`, la date étant celle de diffusion du direct. |
 | `transcribe.py <audio> [sortie.md] [--tashkeel catt\|ichkil\|none] [--model …]` | faster-whisper `large-v3` sur GPU, puis vocalisation CATT par lots. Produit un Markdown avec un segment horodaté par ligne. |
 | `md_to_text.py <transcript.md> [--pause S] [--mots N] [--lignes]` | Retire les horodatages et regroupe en paragraphes (silence > 2 s ou 100 mots). |
-| `textTomd.py <fichier.txt>` | Nettoyage basique des textes de livres exportés depuis aljam3 (en cours de remplacement). |
+| `draft_lesson.py <dossier du cours>` | Après validation (`texte-ok.md`), fait écrire par le modèle local (Ollama, qwen3.5:27b) un `brouillon.md` : résumé, matière, plan, concepts, أعلام, فوائد, passages douteux, résumé français. C'est le premier étage de l'ingestion, Claude relit ce brouillon dans `/ingest`. |
+| `txt_to_md.py <livre.txt> --categorie … --ouvrage … --tome N` | Texte de livre (aljam3/turath, pages séparées par `PAGE_SEPARATOR`) vers Markdown structuré : titres (sourate, باب, « قوله تعالى »), paragraphes recollés à travers les pages, marqueurs `<!-- ص N -->`, notes de bas de page dans un fichier séparé relié par wikilinks. |
+| `pdf_to_md.py <livre.pdf> [--txt livre.txt] [--pages a-b] …` | Livre scanné : OCR marker-pdf (structure) + texte aljam3 (second avis) réconciliés page par page par le modèle local, puis même post-traitement que `txt_to_md.py`. Les pages réconciliées sont mises en cache dans `temp/marker/`. |
+| `textTomd.py <fichier.txt>` | Ancien nettoyage basique, conservé pour référence. |
+
+### Flux d'un cours
+
+```
+sources.txt ──pull_sources.py──► raw/youtube/<cours>/{meta,transcript,texte}.md
+                                        │  relecture manuelle
+                                        ▼
+                                 texte-ok.md ──draft_lesson.py──► brouillon.md ──/ingest (Claude)──► wiki/
+```
 
 ## Prérequis
 
