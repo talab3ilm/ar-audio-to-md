@@ -1,0 +1,26 @@
+# Environnement Python
+.venv/
+__pycache__/
+*.pyc
+
+# Audio téléchargé (lourd, régénérable avec grab_audio.sh)
+audio/
+*.flac
+*.wav
+*.mp3
+
+# Le vault est son propre dépôt git (voir secondBrain/.git)
+secondBrain/
+
+# Guides NextWork : archive d'origine et HTML lourds
+docs/nextwork/*.zip
+docs/nextwork/*_files/
+docs/nextwork/*.html
+
+# Fichiers temporaires
+*.log
+
+# Archives et documents déposés à la racine pour traitement (vont dans secondBrain/raw/)
+/*.zip
+/*.pdf
+/*.txt
