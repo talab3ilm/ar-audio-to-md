@@ -2,26 +2,26 @@
 #
 # Une URL par ligne. Les lignes vides et celles qui commencent par # sont ignorées.
 # Traitement : ./pull_sources.py   (voir --help). Les sources déjà traitées sont
-# enregistrées dans sources.done.tsv et ignorées aux passages suivants.
+# enregistrées dans sources.done.tsv et ignorées aux passages suivants (--force URL pour refaire).
 #
-# Types reconnus :
-#   - vidéo YouTube      https://youtu.be/<id>  ou  https://www.youtube.com/watch?v=<id>
-#   - playlist YouTube   https://www.youtube.com/playlist?list=<id>   (toutes les vidéos, les nouvelles seront
-#                        prises aux passages suivants)
-#   - chaîne YouTube     https://www.youtube.com/@<nom>/videos        (idem, attention au volume : utiliser
-#                        --max-new pour limiter)
-#   - livre              https://app.turath.io/book/<id>  ou  https://www.aljam3.com/<...>
-#                        -> enregistré pour conversion (pdf_to_md.py / txt_to_md.py), pas de téléchargement
-#                           automatique pour l'instant
+# Vidéos (-> secondBrain/raw/youtube/) :
+#   https://youtu.be/<id>  ou  https://www.youtube.com/watch?v=<id>
+#   https://www.youtube.com/playlist?list=<id>     toutes les vidéos ; les nouvelles seront prises aux passages suivants
+#   https://www.youtube.com/@<nom>/videos          idem pour une chaîne (limiter avec --max-new)
+#   option :  | matière=<nom de la matière>        renseigne meta.md
 #
-# Option par ligne : ajouter  | matière=<nom de la matière>  pour renseigner meta.md, par exemple :
-#   https://youtu.be/mxWq9pEKBTs | matière=السيرة النبوية
+# Livres (-> secondBrain/raw/pdfs/<catégorie>/<ouvrage>/) :
+#   https://app.turath.io/book/<id>                UN SEUL lien suffit : le texte vient de turath, et le TXT
+#                                                  du scan (tashkeel de l'édition + notes du محقق) est
+#                                                  téléchargé automatiquement depuis le même fonds (Hugging Face)
+#   options :  | catégorie=<matière>  | ouvrage=<nom du dossier>  | pdf=oui   (copier aussi les PDF, hors git)
+#   Un lien aljam3.com est accepté mais ignoré : donner le lien turath du même livre.
 
-# --- Séances inaugurales (octobre 2026), déjà traitées à la main ---
-https://youtu.be/mxWq9pEKBTs
-https://youtu.be/7F8P5R9pWPs
-https://youtu.be/xLTmoZV9yF0
+# --- Séances inaugurales (octobre 2026) ---
+https://youtu.be/mxWq9pEKBTs | matière=آداب طلب العلم
+https://youtu.be/7F8P5R9pWPs | matière=السيرة النبوية
+https://youtu.be/xLTmoZV9yF0 | matière=آداب طلب العلم
 
 # --- Livres ---
-https://app.turath.io/book/12031?page=1
-https://www.aljam3.com/34265/64857/1
+https://app.turath.io/book/133357 | catégorie=علوم القرآن | ouvrage=أحكام القرآن لابن الفرس
+https://app.turath.io/book/12031  | catégorie=التزكية والأخلاق

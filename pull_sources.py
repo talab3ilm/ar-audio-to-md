@@ -97,9 +97,30 @@ def classify(url):
         m = re.match(r"^/(shorts|live)/([A-Za-z0-9_-]{11})", u.path)
         if m:
             return "video", m.group(2)
-    if "turath.io" in host or "aljam3.com" in host:
-        return "book", url
+    if "turath.io" in host:
+        m = re.search(r"/book/(\d+)", u.path)
+        return ("book", m.group(1)) if m else ("unknown", url)
+    if "aljam3.com" in host:
+        return "aljam3", url          # accepté mais non traité : le même scan est atteint via turath
     return "unknown", url
+
+
+def process_book(book_id, options, dry_run=False):
+    """Livre turath -> raw/pdfs/<catégorie>/<ouvrage>/ via turath_to_md.py (TXT des scans téléchargés
+    automatiquement depuis Hugging Face pour le tashkeel et les notes)."""
+    categorie = options.get("catégorie", options.get("categorie", options.get("matière", options.get("matiere", "غير مصنف"))))
+    cmd = [ROOT / "turath_to_md.py", book_id, "--categorie", categorie]
+    if options.get("ouvrage"):
+        cmd += ["--ouvrage", options["ouvrage"]]
+    if options.get("pdf", "").lower() in ("oui", "yes", "1", "true"):
+        cmd.append("--pdf")
+    if dry_run:
+        print("  [dry-run]", " ".join(str(c) for c in cmd))
+        return None
+    res = run(cmd, capture_output=True, text=True)
+    print("  " + res.stdout.strip().replace("\n", "\n  "))
+    written = [l.split("->", 1)[1].strip() for l in res.stdout.splitlines() if "->" in l]
+    return Path(written[0]).parent if written else None
 
 
 def expand_list(url):
@@ -209,6 +230,8 @@ def main():
                 videos.append((vid, options, f"https://www.youtube.com/watch?v={vid}"))
         elif kind == "book":
             books.append((ident, options))
+        elif kind == "aljam3":
+            print(f"  (aljam3 ignoré : indiquer le lien turath du même livre) {url}")
         else:
             print(f"! URL non reconnue, ignorée : {url}")
 
@@ -227,7 +250,7 @@ def main():
     for ident, options in books:
         is_done = ("book", ident) in done
         if args.list:
-            print(f"{'fait   ' if is_done else 'nouveau'}  livre  {ident}")
+            print(f"{'fait   ' if is_done else 'nouveau'}  livre  turath {ident}  {options}")
     if args.list:
         return
 
@@ -246,14 +269,19 @@ def main():
             print(f"  ! échec : {e}")
             mark_done("video", vid, "", f"ERREUR {e.returncode}")
 
-    # 4. Livres : enregistrement seulement (conversion manuelle avec pdf_to_md.py / txt_to_md.py)
-    new_books = [(i, o) for i, o in books if ("book", i) not in done]
-    if new_books:
-        print(f"\n{len(new_books)} livre(s) nouveau(x), à convertir avec pdf_to_md.py ou txt_to_md.py :")
-        for ident, options in new_books:
-            print(f"  - {ident}")
-            if not args.dry_run:
-                mark_done("book", ident, "", "à convertir manuellement")
+    # 4. Livres turath -> raw/pdfs/
+    new_books = [(i, o) for i, o in books if ("book", i) not in done or i in forced]
+    print(f"\n{len(new_books)} livre(s) à convertir.")
+    for ident, options in new_books:
+        print(f"\n=== livre turath {ident}")
+        try:
+            dest = process_book(ident, options, dry_run=args.dry_run)
+            if dest is not None:
+                mark_done("book", ident, dest.relative_to(ROOT) if dest.is_absolute() else dest)
+                print(f"  -> {dest}")
+        except subprocess.CalledProcessError as e:
+            print(f"  ! échec : {e}\n{(e.stderr or '')[-800:]}")
+            mark_done("book", ident, "", f"ERREUR {e.returncode}")
 
     print("\nTerminé. Prochaine étape : relire texte.md -> texte-ok.md, puis draft_lesson.py et /ingest.")
 

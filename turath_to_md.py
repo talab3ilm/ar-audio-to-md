@@ -16,7 +16,9 @@ import argparse
 import difflib
 import json
 import re
+import shutil
 import sys
+import urllib.parse
 import urllib.request
 from pathlib import Path
 
@@ -25,12 +27,22 @@ import txt_to_md as T  # noqa: E402
 
 ROOT = Path(__file__).resolve().parent
 JSON_URL = "https://files.turath.io/books-v3/{id}.json"
+# Les scans référencés par turath (meta.files) sont publiés sur Hugging Face par ieasybooks ;
+# aljam3.com sert exactement ces fichiers. TXT = OCR de l'imprimé (avec son tashkeel et ses notes).
+HF_URL = "https://huggingface.co/datasets/ieasybooks-org/shamela-waqfeya-library/resolve/main/{kind}/{root}/{name}"
 HARAKAT = re.compile(r"[ً-ْٰ]")
 TITLE_SPAN = re.compile(r'<span data-type="title" id=toc-(\d+)>(.*?)</span>', re.S)
 WORD = re.compile(r"[؀-ۿݐ-ݿ]+")
 
 
 # ----------------------------------------------------------------------------- turath
+def download(url, target):
+    """files.turath.io refuse le User-Agent par défaut de Python : on en envoie un de navigateur."""
+    req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0 (X11; Linux x86_64) ar-audio-to-md"})
+    with urllib.request.urlopen(req, timeout=300) as r, open(target, "wb") as f:
+        shutil.copyfileobj(r, f)
+
+
 def load_book(ident):
     m = re.search(r"(\d+)", ident)
     book_id = m.group(1)
@@ -38,7 +50,7 @@ def load_book(ident):
     if not cache.exists():
         cache.parent.mkdir(parents=True, exist_ok=True)
         print(f"Téléchargement {JSON_URL.format(id=book_id)} …")
-        urllib.request.urlretrieve(JSON_URL.format(id=book_id), cache)
+        download(JSON_URL.format(id=book_id), cache)
     d = json.loads(cache.read_text(encoding="utf-8"))
     meta_raw = d.get("ً", {})
     struct = d.get("٘", {})
@@ -50,6 +62,50 @@ def load_book(ident):
 
 def bare(w):
     return HARAKAT.sub("", w)
+
+
+def fetch_scan_files(meta, kinds=("txt",)):
+    """Télécharge depuis Hugging Face les fichiers de scan listés par turath (hors couverture).
+    Renvoie {kind: [Path, …]} ; les fichiers déjà présents dans temp/turath/<id>/ ne sont pas retéléchargés."""
+    files = meta.get("files") or {}
+    root, names = files.get("root"), files.get("files", [])
+    out = {k: [] for k in kinds}
+    if not root or not names:
+        return out
+    dest = ROOT / "temp" / "turath" / meta["id"]
+    dest.mkdir(parents=True, exist_ok=True)
+    for entry in names:
+        name, _, label = entry.partition("|")
+        if label.strip() == "الغلاف":
+            continue
+        for kind in kinds:
+            fname = Path(name).with_suffix("." + kind).name
+            target = dest / fname
+            if not target.exists():
+                url = HF_URL.format(kind=kind, root=urllib.parse.quote(root), name=urllib.parse.quote(fname))
+                try:
+                    print(f"  téléchargement {kind} {fname} …")
+                    download(url, target)
+                except Exception as e:  # fichier absent du dépôt, on continue sans
+                    print(f"  ! {kind} {fname} indisponible ({e})")
+                    continue
+            out[kind].append(target)
+    return out
+
+
+def assign_txt_to_volumes(txt_paths, pages, vols):
+    """Associe chaque TXT au tome turath dont les pages lui ressemblent le plus."""
+    assignment = {}
+    samples = {v: [p for p in pages if p["vol"] == str(v)][20:80:5] for v in vols}
+    for path in txt_paths:
+        txt_pages = [p.strip() for p in T.split_pages(path.read_text(encoding="utf-8"))]
+        scores = {v: best_offset(pages, txt_pages, samples[v])[1] for v in vols if samples[v]}
+        v = max(scores, key=scores.get)
+        if scores[v] >= 0.25 and v not in assignment:
+            assignment[v] = path
+        else:
+            print(f"  ! {path.name} : aucun tome convaincant (meilleur {v} à {scores[v]:.2f}), ignoré")
+    return assignment
 
 
 # ----------------------------------------------------------------------------- tashkeel
@@ -100,6 +156,33 @@ def best_offset(tpages, txt_pages, vol_pages_sample):
 
 
 # ----------------------------------------------------------------------------- conversion
+NOTE_SEP = re.compile(r"\n_{5,}\s*\n")
+TURATH_NOTE = re.compile(r"^\s*\(?([٠-٩0-9]{1,2})\)?\s+(\S.*)$")
+# appel de note turath : chiffre arabe collé à la fin d'un mot ou d'une ponctuation ("المرسلة١ أخرجاه")
+TURATH_CALL = re.compile(r"(?<=[؀-ۿ»\)\]\.،:؟!])([٠-٩]{1,2})(?=[\s،.:؟!»\)]|$)")
+
+
+def split_turath_notes(text):
+    """Page turath -> (corps, [(n, note)]) quand les notes du محقق sont présentes (séparateur _____)."""
+    m = NOTE_SEP.search(text)
+    if not m:
+        return text, []
+    body, tail = text[:m.start()], text[m.end():]
+    notes, current = [], None
+    for ln in tail.splitlines():
+        mm = TURATH_NOTE.match(ln)
+        if mm:
+            if current:
+                notes.append(current)
+            n = int(T.to_ar_digits(mm.group(1)).translate(str.maketrans("٠١٢٣٤٥٦٧٨٩", "0123456789")))
+            current = [n, mm.group(2).strip()]
+        elif current and ln.strip():
+            current[1] += " " + ln.strip()
+    if current:
+        notes.append(current)
+    return body, notes
+
+
 def page_to_blocks(text, toc_levels):
     """Texte d'une page turath -> lignes Markdown (titres via la table des matières)."""
     lines = []
@@ -141,25 +224,32 @@ def convert_volume(meta, toc_levels, pages, vol, txt_pages, offset, ouvrage, cat
         if page_filter and p["page"] not in page_filter:
             continue
         label = T.to_ar_digits(str(p["page"]))
-        text = p["text"]
-        donor, notes = "", []
+        # notes du محقق : celles de turath (texte saisi) si présentes, sinon celles du TXT du scan (OCR)
+        text, notes = split_turath_notes(p["text"])
+        inline_calls = bool(notes)
+        donor, txt_notes = "", []
         if txt_pages is not None:
             i = p["page"] + offset
             if 0 <= i < len(txt_pages):
                 lines = [l for l in txt_pages[i].splitlines() if l.strip()]
                 if lines and T.PAGE_NUM_LINE.match(lines[-1]):
                     lines.pop()
-                body, notes = T.extract_notes(lines)
+                body, txt_notes = T.extract_notes(lines)
                 donor = "\n".join(body)
+        if not notes:
+            notes = txt_notes
         text, k = transfer_tashkeel(text, donor)
         n_words_tashkeel += k
         n_pages += 1
+        if inline_calls:
+            text = TURATH_CALL.sub(lambda m: f" [[{notes_name}#ص {label}|({m.group(1)})]]", text)
         out.append(f"\n<!-- ص {label} -->\n")
         for ln in page_to_blocks(text, toc_levels):
             out.append(ln + "\n")
+        if notes and not inline_calls:
+            out.append(f"حواشي الصفحة: [[{notes_name}#ص {label}|({T.to_ar_digits(str(len(notes)))})]]\n")
         if notes:
             n_notes += len(notes)
-            out.append(f"حواشي الصفحة: [[{notes_name}#ص {label}|({T.to_ar_digits(str(len(notes)))})]]\n")
             notes_out.append(f"\n## ص {label}\n")
             for n, t in notes:
                 notes_out.append(f"- ({T.to_ar_digits(str(n))}) {t}")
@@ -175,6 +265,10 @@ def main():
     ap.add_argument("--ouvrage", help="nom de l'ouvrage (défaut : titre turath)")
     ap.add_argument("--txt", action="append", default=[], metavar="VOL=FICHIER", help="TXT aljam3 du tome VOL")
     ap.add_argument("--txt-dir", help="dossier contenant les TXT aljam3, repérés par '0<vol>_' dans le nom")
+    ap.add_argument("--sans-auto-txt", action="store_true",
+                    help="ne pas télécharger les TXT des scans depuis Hugging Face (par défaut : téléchargés et "
+                         "associés aux tomes automatiquement, s'ils existent)")
+    ap.add_argument("--pdf", action="store_true", help="télécharger aussi les PDF des scans dans le dossier de l'ouvrage (hors git)")
     ap.add_argument("--vol", type=int, action="append", help="limiter à ce(s) tome(s)")
     ap.add_argument("--pages", help="limiter aux pages imprimées a-b (test)")
     ap.add_argument("--out-dir", default=str(ROOT / "secondBrain" / "raw" / "pdfs"))
@@ -195,6 +289,19 @@ def main():
             m = re.search(r"\b0?(\d)_\d+\.txt$", f.name) or re.search(r"\b0?(\d)\b.*\.txt$", f.name)
             if m and int(m.group(1)) in vols and int(m.group(1)) not in txt_files:
                 txt_files[int(m.group(1))] = f
+    if not txt_files and not args.sans_auto_txt:
+        got = fetch_scan_files(meta, kinds=("txt", "pdf") if args.pdf else ("txt",))
+        if got["txt"]:
+            txt_files = assign_txt_to_volumes(got["txt"], pages, vols)
+            print("TXT associés aux tomes :", {v: p.name for v, p in sorted(txt_files.items())})
+        else:
+            print("Aucun TXT de scan disponible : texte turath seul, sans tashkeel ni notes du محقق")
+        if args.pdf and got.get("pdf"):
+            folder = Path(args.out_dir) / args.categorie / ouvrage
+            folder.mkdir(parents=True, exist_ok=True)
+            for p in got["pdf"]:
+                if not (folder / p.name).exists():
+                    shutil.copy2(p, folder / p.name)
     page_filter = None
     if args.pages:
         a, _, b = args.pages.partition("-")
