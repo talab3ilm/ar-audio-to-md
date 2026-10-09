@@ -157,9 +157,10 @@ def best_offset(tpages, txt_pages, vol_pages_sample):
 
 # ----------------------------------------------------------------------------- conversion
 NOTE_SEP = re.compile(r"\n_{5,}\s*\n")
-TURATH_NOTE = re.compile(r"^\s*\(?([٠-٩0-9]{1,2})\)?\s+(\S.*)$")
+# "١ texte", "(١) texte" ou numérotation continue "٣٧٢ - texte"
+TURATH_NOTE = re.compile(r"^\s*\(?([٠-٩0-9]{1,4})\)?\s*[-–ـ]?\s+(\S.*)$")
 # appel de note turath : chiffre arabe collé à la fin d'un mot ou d'une ponctuation ("المرسلة١ أخرجاه")
-TURATH_CALL = re.compile(r"(?<=[؀-ۿ»\)\]\.،:؟!])([٠-٩]{1,2})(?=[\s،.:؟!»\)]|$)")
+TURATH_CALL = re.compile(r"(?<=[؀-ۿ»\)\]\.،:؟!])([٠-٩]{1,4})(?=[\s،.:؟!»\)]|$)")
 
 
 def split_turath_notes(text):
