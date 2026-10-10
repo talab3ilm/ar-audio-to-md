@@ -33,7 +33,8 @@ https://youtu.be/9Cn3zb7yzZs
 https://app.turath.io/book/133357 | catégorie=علوم القرآن | ouvrage=أحكام القرآن لابن الفرس
 https://app.turath.io/book/12031  | catégorie=التزكية والأخلاق
 https://app.turath.io/book/14249  | catégorie=الفقه | ouvrage=الدر الثمين والمورد المعين لميارة | pdf=oui
-https://app.turath.io/book/11371  | catégorie=النحو | ouvrage=متن الآجرومية | pdf=oui
+https://takw.in/reader.php?matn=%D8%A7%D9%84%D8%A2%D8%AC%D8%B1%D9%88%D9%85%D9%8A%D8%A9 | catégorie=النحو | ouvrage=متن الآجرومية
+# (même métn, version turath 11371 + OCR, remplacée par takw.in entièrement vocalisé)
 https://takw.in/reader.php?matn=%D8%A7%D9%84%D8%A3%D8%B1%D8%AC%D9%88%D8%B2%D8%A9-%D8%A7%D9%84%D9%85%D9%8A%D8%A6%D9%8A%D8%A9 | catégorie=السيرة النبوية | ouvrage=الأرجوزة المئية في ذكر حال أشرف البرية
 # (même métn, par OCR, remplacé par la version takw.in) https://al3ilm.net/up/الأرجوزة-الميئية.pdf | poeme=oui
 https://files.a-alqasim.com/books/mutoon/071102AlMeiyyahSeerahHawaashee.pdf | catégorie=السيرة النبوية | ouvrage=الأرجوزة المئية - طبعة القاسم بالحواشي | pdf=oui

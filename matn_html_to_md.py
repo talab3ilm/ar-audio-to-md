@@ -32,22 +32,33 @@ def strip_tags(s):
 
 
 def parse_takwin(h):
-    """Renvoie (titre, blocs) ; blocs = ("h", texte) | ("p", texte) | ("v", "", sadr, ajiz)."""
+    """Renvoie (titre, blocs) ; blocs = ("h", texte) | ("p", texte) | ("v", "", sadr, ajiz).
+    Gère les métons versifiés (div.bayt) et en prose (lignes séparées par <br>, titres en <center>,
+    termes en <b> rendus en gras)."""
     title = strip_tags(re.search(r"<title>(.*?)</title>", h, re.S).group(1)) if "<title>" in h else ""
     body = h.split('<div id="cont">', 1)[1] if '<div id="cont">' in h else h
+    body = body.split("<footer", 1)[0]
+    body = re.sub(r'<span class="indenter"></span>', "", body)
     blocks = []
-    # on parcourt les éléments de premier niveau dans l'ordre : <center>, <div class="bayt">, <div class="basmalah">, autres <div>/<p>
-    for m in re.finditer(r'<center>(.*?)</center>|<div class="bayt">(.*?)</div>\s*</div>|<div class="basmalah">(.*?)</div>|<(?:p|h[1-6])[^>]*>(.*?)</(?:p|h[1-6])>', body, re.S):
+    # découpage en éléments de premier niveau, dans l'ordre
+    pattern = re.compile(r'<center>(.*?)</center>|<div class="bayt">(.*?)</div>\s*</div>|<div class="basmalah">(.*?)</div>|((?:<(?!center|div|br)[^>]*>)*[^<]+(?:<(?!center|div|br)[^>]*>[^<]*)*)(?:<br\s*/?>|$)', re.S)
+    for m in pattern.finditer(body):
         if m.group(1) is not None:
-            blocks.append(("h", strip_tags(m.group(1))))
+            t = strip_tags(m.group(1))
+            if t:
+                blocks.append(("h", t))
         elif m.group(2) is not None:
             sadr = re.search(r'class="bayt-sadr">(.*?)</div>', m.group(2), re.S)
             ajiz = re.search(r'class="bayt-ajiz">(.*?)(?:</div>|$)', m.group(2), re.S)
             blocks.append(("v", "", strip_tags(sadr.group(1)) if sadr else "", strip_tags(ajiz.group(1)) if ajiz else ""))
         elif m.group(3) is not None:
             blocks.append(("p", strip_tags(m.group(3))))
-        elif m.group(4) is not None and strip_tags(m.group(4)):
-            blocks.append(("p", strip_tags(m.group(4))))
+        elif m.group(4) is not None:
+            frag = re.sub(r"</?b>", "**", m.group(4))
+            t = html.unescape(re.sub(r"<[^>]+>", "", frag)).strip()
+            t = re.sub(r"\*\*\s*:", "**:", t)
+            if t:
+                blocks.append(("p", t))
     return title, blocks
 
 
