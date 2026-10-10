@@ -28,3 +28,4 @@ https://youtu.be/KIECl71hNvA
 # --- Livres ---
 https://app.turath.io/book/133357 | catégorie=علوم القرآن | ouvrage=أحكام القرآن لابن الفرس
 https://app.turath.io/book/12031  | catégorie=التزكية والأخلاق
+https://app.turath.io/book/14249  | catégorie=الفقه | ouvrage=الدر الثمين والمورد المعين لميارة | pdf=oui
