@@ -93,7 +93,7 @@ def page_to_blocks(page, min_conf=0.0):
     lines = [l for l in page["text_lines"] if clean(l["text"]) and l.get("confidence", 1) >= min_conf
              and 0.07 * H < (l["bbox"][1] + l["bbox"][3]) / 2 < 0.95 * H]
     heights = sorted(l["bbox"][3] - l["bbox"][1] for l in lines) or [20]
-    tol = max(8, heights[len(heights) // 2] * 0.6)
+    tol = max(6, heights[len(heights) // 2] * 0.45)
     rows = group_rows(lines, tol)
 
     def prep(row):
@@ -110,7 +110,15 @@ def page_to_blocks(page, min_conf=0.0):
                 num = T.to_ar_digits(m.group(1)); texts[0] = NUM.sub("", texts[0], count=1)
         return ls, texts, num
 
-    prepared = [prep(r) for r in rows]
+    split_rows = []
+    for r in rows:
+        if len(r["lines"]) >= 4:
+            ls = sorted(r["lines"], key=lambda l: (l["bbox"][1] + l["bbox"][3]) / 2)
+            mid = len(ls) // 2
+            split_rows.append({"cy": r["cy"], "lines": ls[:mid]}); split_rows.append({"cy": r["cy"], "lines": ls[mid:]})
+        else:
+            split_rows.append(r)
+    prepared = [prep(r) for r in split_rows]
     # motif de deux colonnes dominant : (centre boîte droite, centre boîte gauche) arrondis à 5 % de la largeur
     from collections import Counter
     def key2(ls):
@@ -153,22 +161,30 @@ def page_to_blocks(page, min_conf=0.0):
 
 
 def renumber(pages_blocks):
-    """Les vers sont numérotés en séquence : on corrige les numéros mal lus par l'OCR
-    (écart avec le numéro attendu), en marquant d'un * ceux qui ont été corrigés."""
+    """Les vers sont numérotés en séquence. Les numéros lus par l'OCR sont peu fiables (٥ lu 0,
+    ٦ lu 7…) : on numérote séquentiellement, et on ne suit un saut de l'OCR que si deux vers
+    consécutifs le confirment (bit sauté par l'OCR, signalé par une ligne « سقط »). Un * marque
+    un numéro OCR différent du numéro attribué."""
+    tr = str.maketrans("٠١٢٣٤٥٦٧٨٩", "0123456789")
+    verses = [(pi, i) for pi, blocks in enumerate(pages_blocks) for i, b in enumerate(blocks) if b[0] == "v"]
+    def ocr_num(b):
+        try:
+            return int(T.to_ar_digits(b[1]).translate(tr)) if b[1] and b[1] != "?" else None
+        except ValueError:
+            return None
     expected = 1
-    for blocks in pages_blocks:
-        for i, b in enumerate(blocks):
-            if b[0] != "v":
-                continue
-            try:
-                n = int(T.to_ar_digits(b[1]).translate(str.maketrans("٠١٢٣٤٥٦٧٨٩", "0123456789"))) if b[1] and b[1] != "?" else None
-            except ValueError:
-                n = None
-            if n == expected:
-                blocks[i] = ("v", T.to_ar_digits(str(n)), b[2], b[3])
-            else:
-                blocks[i] = ("v", T.to_ar_digits(str(expected)) + ("*" if b[1] else ""), b[2], b[3])
-            expected += 1
+    for k, (pi, i) in enumerate(verses):
+        b = pages_blocks[pi][i]
+        n = ocr_num(b)
+        nxt = ocr_num(pages_blocks[verses[k + 1][0]][verses[k + 1][1]]) if k + 1 < len(verses) else None
+        if n is not None and 0 < n - expected <= 3 and nxt == n + 1:
+            # saut confirmé : des vers manquent dans l'OCR
+            pages_blocks[pi].insert(i, ("p", f"(سقط {n - expected} بيت في التعرف الضوئي : الأبيات {T.to_ar_digits(str(expected))}–{T.to_ar_digits(str(n - 1))})"))
+            verses = [(p2, j + 1 if p2 == pi and j >= i else j) for p2, j in verses]
+            i += 1
+            expected = n
+        pages_blocks[pi][i] = ("v", T.to_ar_digits(str(expected)) + ("" if n in (None, expected) else "*"), b[2], b[3])
+        expected += 1
     return pages_blocks
 
 
