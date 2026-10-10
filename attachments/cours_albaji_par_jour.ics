@@ -1,0 +1,1152 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//ar-audio-to-md//cours albaji//AR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:أكاديمية الإمام الباجي — وثائق ال
+ دروس
+BEGIN:VEVENT
+UID:albaji-20261012-93270048@ar-audio-to-md
+DTSTAMP:20261010T210501Z
+DTSTART;VALUE=DATE:20261012
+DTEND;VALUE=DATE:20261013
+SUMMARY:السيرة النبوية : 2 document(s)
+DESCRIPTION:المستوى الأول\n- تفريغ الدرس 1 - السي
+ رة النبوية (id 534)\n- تشجير الدرس 1 - السيرة ا
+ لنبوية (id 601)
+CATEGORIES:السيرة النبوية
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:albaji-20261014-98980364@ar-audio-to-md
+DTSTAMP:20261010T210501Z
+DTSTART;VALUE=DATE:20261014
+DTEND;VALUE=DATE:20261015
+SUMMARY:التوحيد و العقيدة : 2 document(s)
+DESCRIPTION:المستوى الأول\n- تشجير الدرس 1 - التو
+ حيد والعقيدة (id 588)\n- تفريغ الدرس 1 - التوحي
+ د والعقيدة (id 547)
+CATEGORIES:التوحيد و العقيدة
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:albaji-20261015-98061243@ar-audio-to-md
+DTSTAMP:20261010T210501Z
+DTSTART;VALUE=DATE:20261015
+DTEND;VALUE=DATE:20261016
+SUMMARY:النحو : 3 document(s)
+DESCRIPTION:المستوى الأول\n- تفريغ الدرس 1 - النح
+ و (id 562)\n- تلخيص النحو [1] - السنة الأولى (id 958
+ )\n- تشجير الدرس 1 - النحو (id 575)
+CATEGORIES:النحو
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:albaji-20261017-18345766@ar-audio-to-md
+DTSTAMP:20261010T210501Z
+DTSTART;VALUE=DATE:20261017
+DTEND;VALUE=DATE:20261018
+SUMMARY:الفقه : 2 document(s)
+DESCRIPTION:المستوى الأول\n- تلخيص الفقه [1] - الس
+ نة الأولى (id 1059)\n- تفريغ الفقه - السنة الأو
+ لى - 01 (id 513)
+CATEGORIES:الفقه
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:albaji-20261019-93270048@ar-audio-to-md
+DTSTAMP:20261010T210501Z
+DTSTART;VALUE=DATE:20261019
+DTEND;VALUE=DATE:20261020
+SUMMARY:السيرة النبوية : 2 document(s)
+DESCRIPTION:المستوى الأول\n- تشجير الدرس 2 - السي
+ رة النبوية (id 602)\n- تفريغ الدرس 2 - السيرة ا
+ لنبوية (id 535)
+CATEGORIES:السيرة النبوية
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:albaji-20261021-98980364@ar-audio-to-md
+DTSTAMP:20261010T210501Z
+DTSTART;VALUE=DATE:20261021
+DTEND;VALUE=DATE:20261022
+SUMMARY:التوحيد و العقيدة : 2 document(s)
+DESCRIPTION:المستوى الأول\n- تشجير الدرس 2 - التو
+ حيد والعقيدة (id 589)\n- تفريغ الدرس 2 - التوحي
+ د والعقيدة (id 548)
+CATEGORIES:التوحيد و العقيدة
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:albaji-20261022-98061243@ar-audio-to-md
+DTSTAMP:20261010T210501Z
+DTSTART;VALUE=DATE:20261022
+DTEND;VALUE=DATE:20261023
+SUMMARY:النحو : 3 document(s)
+DESCRIPTION:المستوى الأول\n- تشجير الدرس 2 - النح
+ و (id 576)\n- تفريغ الدرس 2 - النحو (id 563)\n- تلخيص
+  النحو [2] - السنة الأولى (id 959)
+CATEGORIES:النحو
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:albaji-20261024-18345766@ar-audio-to-md
+DTSTAMP:20261010T210501Z
+DTSTART;VALUE=DATE:20261024
+DTEND;VALUE=DATE:20261025
+SUMMARY:الفقه : 2 document(s)
+DESCRIPTION:المستوى الأول\n- تلخيص الفقه [2] - الس
+ نة الأولى (id 1060)\n- تفريغ الفقه - السنة الأو
+ لى - 02 (id 515)
+CATEGORIES:الفقه
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:albaji-20261026-93270048@ar-audio-to-md
+DTSTAMP:20261010T210501Z
+DTSTART;VALUE=DATE:20261026
+DTEND;VALUE=DATE:20261027
+SUMMARY:السيرة النبوية : 3 document(s)
+DESCRIPTION:المستوى الأول\n- تشجير الدرس 3 - السي
+ رة النبوية (id 603)\n- تفريغ الدرس 3 - السيرة ا
+ لنبوية (id 815)\n- تلخيص السيرة [3] - السنة الأو
+ لى (id 1030)
+CATEGORIES:السيرة النبوية
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:albaji-20261028-98980364@ar-audio-to-md
+DTSTAMP:20261010T210501Z
+DTSTART;VALUE=DATE:20261028
+DTEND;VALUE=DATE:20261029
+SUMMARY:التوحيد و العقيدة : 2 document(s)
+DESCRIPTION:المستوى الأول\n- تشجير الدرس 3 - التو
+ حيد والعقيدة (id 590)\n- تفريغ الدرس 3 - التوحي
+ د والعقيدة (id 549)
+CATEGORIES:التوحيد و العقيدة
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:albaji-20261029-98061243@ar-audio-to-md
+DTSTAMP:20261010T210501Z
+DTSTART;VALUE=DATE:20261029
+DTEND;VALUE=DATE:20261030
+SUMMARY:النحو : 3 document(s)
+DESCRIPTION:المستوى الأول\n- تلخيص النحو [3] - الس
+ نة الأولى (id 960)\n- تشجير الدرس 3 - النحو (id 577
+ )\n- تفريغ الدرس 3 - النحو (id 564)
+CATEGORIES:النحو
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:albaji-20261031-18345766@ar-audio-to-md
+DTSTAMP:20261010T210501Z
+DTSTART;VALUE=DATE:20261031
+DTEND;VALUE=DATE:20261101
+SUMMARY:الفقه : 2 document(s)
+DESCRIPTION:المستوى الأول\n- تلخيص الفقه [3] - الس
+ نة الأولى (id 1061)\n- تفريغ الفقه - السنة الأو
+ لى - 03 (id 516)
+CATEGORIES:الفقه
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:albaji-20261102-93270048@ar-audio-to-md
+DTSTAMP:20261010T210501Z
+DTSTART;VALUE=DATE:20261102
+DTEND;VALUE=DATE:20261103
+SUMMARY:السيرة النبوية : 3 document(s)
+DESCRIPTION:المستوى الأول\n- تشجير الدرس 4 - السي
+ رة النبوية (id 604)\n- تلخيص السيرة [4] - السنة 
+ الأولى (id 1031)\n- تفريغ الدرس 4 - السيرة النب
+ وية (id 537)
+CATEGORIES:السيرة النبوية
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:albaji-20261104-98980364@ar-audio-to-md
+DTSTAMP:20261010T210501Z
+DTSTART;VALUE=DATE:20261104
+DTEND;VALUE=DATE:20261105
+SUMMARY:التوحيد و العقيدة : 2 document(s)
+DESCRIPTION:المستوى الأول\n- تشجير الدرس 4 - التو
+ حيد والعقيدة (id 591)\n- تفريغ الدرس 4 - التوحي
+ د والعقيدة (id 550)
+CATEGORIES:التوحيد و العقيدة
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:albaji-20261105-98061243@ar-audio-to-md
+DTSTAMP:20261010T210501Z
+DTSTART;VALUE=DATE:20261105
+DTEND;VALUE=DATE:20261106
+SUMMARY:النحو : 3 document(s)
+DESCRIPTION:المستوى الأول\n- تفريغ الدرس 4 - النح
+ و (id 565)\n- تلخيص النحو [4] - السنة الأولى (id 961
+ )\n- تشجير الدرس 4 - النحو (id 578)
+CATEGORIES:النحو
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:albaji-20261107-18345766@ar-audio-to-md
+DTSTAMP:20261010T210501Z
+DTSTART;VALUE=DATE:20261107
+DTEND;VALUE=DATE:20261108
+SUMMARY:الفقه : 2 document(s)
+DESCRIPTION:المستوى الأول\n- تفريغ الفقه - السنة
+  الأولى - 04 (id 519)\n- تلخيص الفقه [4] - السنة ال
+ أولى (id 1062)
+CATEGORIES:الفقه
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:albaji-20261109-93270048@ar-audio-to-md
+DTSTAMP:20261010T210501Z
+DTSTART;VALUE=DATE:20261109
+DTEND;VALUE=DATE:20261110
+SUMMARY:السيرة النبوية : 3 document(s)
+DESCRIPTION:المستوى الأول\n- تلخيص السيرة [5] - ال
+ سنة الأولى (id 1032)\n- تشجير الدرس 5 - السيرة ا
+ لنبوية (id 605)\n- تفريغ الدرس 5 - السيرة النبو
+ ية (id 538)
+CATEGORIES:السيرة النبوية
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:albaji-20261111-98980364@ar-audio-to-md
+DTSTAMP:20261010T210501Z
+DTSTART;VALUE=DATE:20261111
+DTEND;VALUE=DATE:20261112
+SUMMARY:التوحيد و العقيدة : 2 document(s)
+DESCRIPTION:المستوى الأول\n- تفريغ الدرس 5 - التو
+ حيد والعقيدة (id 552)\n- تشجير الدرس 5 - التوحي
+ د والعقيدة (id 592)
+CATEGORIES:التوحيد و العقيدة
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:albaji-20261112-98061243@ar-audio-to-md
+DTSTAMP:20261010T210501Z
+DTSTART;VALUE=DATE:20261112
+DTEND;VALUE=DATE:20261113
+SUMMARY:النحو : 3 document(s)
+DESCRIPTION:المستوى الأول\n- تشجير الدرس 5 - النح
+ و (id 579)\n- تفريغ الدرس 5 - النحو (id 566)\n- تلخيص
+  النحو [5] - السنة الأولى (id 962)
+CATEGORIES:النحو
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:albaji-20261114-18345766@ar-audio-to-md
+DTSTAMP:20261010T210501Z
+DTSTART;VALUE=DATE:20261114
+DTEND;VALUE=DATE:20261115
+SUMMARY:الفقه : 2 document(s)
+DESCRIPTION:المستوى الأول\n- تفريغ الفقه - السنة
+  الأولى - 05 (id 521)\n- تلخيص الفقه [5] - السنة ال
+ أولى (id 1063)
+CATEGORIES:الفقه
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:albaji-20261116-93270048@ar-audio-to-md
+DTSTAMP:20261010T210501Z
+DTSTART;VALUE=DATE:20261116
+DTEND;VALUE=DATE:20261117
+SUMMARY:السيرة النبوية : 3 document(s)
+DESCRIPTION:المستوى الأول\n- تفريغ الدرس 6 - السي
+ رة النبوية (id 606)\n- تشجير الدرس 6 - السيرة ا
+ لنبوية (id 607)\n- تلخيص السيرة [6] - السنة الأو
+ لى (id 1033)
+CATEGORIES:السيرة النبوية
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:albaji-20261118-98980364@ar-audio-to-md
+DTSTAMP:20261010T210501Z
+DTSTART;VALUE=DATE:20261118
+DTEND;VALUE=DATE:20261119
+SUMMARY:التوحيد و العقيدة : 2 document(s)
+DESCRIPTION:المستوى الأول\n- تفريغ الدرس 6 - التو
+ حيد والعقيدة (id 553)\n- تشجير الدرس 6 - التوحي
+ د والعقيدة (id 593)
+CATEGORIES:التوحيد و العقيدة
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:albaji-20261119-98061243@ar-audio-to-md
+DTSTAMP:20261010T210501Z
+DTSTART;VALUE=DATE:20261119
+DTEND;VALUE=DATE:20261120
+SUMMARY:النحو : 3 document(s)
+DESCRIPTION:المستوى الأول\n- تلخيص النحو [6] - الس
+ نة الأولى (id 963)\n- تفريغ الدرس 6 - النحو (id 567
+ )\n- تشجير الدرس 6 - النحو (id 580)
+CATEGORIES:النحو
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:albaji-20261121-18345766@ar-audio-to-md
+DTSTAMP:20261010T210501Z
+DTSTART;VALUE=DATE:20261121
+DTEND;VALUE=DATE:20261122
+SUMMARY:الفقه : 2 document(s)
+DESCRIPTION:المستوى الأول\n- تفريغ الفقه - السنة
+  الأولى - 06 (id 523)\n- تلخيص الفقه [6] - السنة ال
+ أولى (id 1064)
+CATEGORIES:الفقه
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:albaji-20261123-93270048@ar-audio-to-md
+DTSTAMP:20261010T210501Z
+DTSTART;VALUE=DATE:20261123
+DTEND;VALUE=DATE:20261124
+SUMMARY:السيرة النبوية : 3 document(s)
+DESCRIPTION:المستوى الأول\n- تلخيص السيرة [7] - ال
+ سنة الأولى (id 1034)\n- تشجير الدرس 7 - السيرة ا
+ لنبوية (id 608)\n- تفريغ الدرس 7 - السيرة النبو
+ ية (id 540)
+CATEGORIES:السيرة النبوية
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:albaji-20261125-98980364@ar-audio-to-md
+DTSTAMP:20261010T210501Z
+DTSTART;VALUE=DATE:20261125
+DTEND;VALUE=DATE:20261126
+SUMMARY:التوحيد و العقيدة : 2 document(s)
+DESCRIPTION:المستوى الأول\n- تشجير الدرس 7 - التو
+ حيد والعقيدة (id 594)\n- تفريغ الدرس 7 - التوحي
+ د والعقيدة (id 555)
+CATEGORIES:التوحيد و العقيدة
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:albaji-20261126-98061243@ar-audio-to-md
+DTSTAMP:20261010T210501Z
+DTSTART;VALUE=DATE:20261126
+DTEND;VALUE=DATE:20261127
+SUMMARY:النحو : 3 document(s)
+DESCRIPTION:المستوى الأول\n- تلخيص النحو [7] - الس
+ نة الأولى (id 964)\n- تفريغ الدرس 7 - النحو (id 568
+ )\n- تشجير الدرس 7 - النحو (id 581)
+CATEGORIES:النحو
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:albaji-20261128-18345766@ar-audio-to-md
+DTSTAMP:20261010T210501Z
+DTSTART;VALUE=DATE:20261128
+DTEND;VALUE=DATE:20261129
+SUMMARY:الفقه : 2 document(s)
+DESCRIPTION:المستوى الأول\n- تلخيص الفقه [7] - الس
+ نة الأولى (id 1065)\n- تفريغ الفقه - السنة الأو
+ لى - 07 (id 522)
+CATEGORIES:الفقه
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:albaji-20261130-93270048@ar-audio-to-md
+DTSTAMP:20261010T210501Z
+DTSTART;VALUE=DATE:20261130
+DTEND;VALUE=DATE:20261201
+SUMMARY:السيرة النبوية : 3 document(s)
+DESCRIPTION:المستوى الأول\n- تلخيص السيرة [8] - ال
+ سنة الأولى (id 1035)\n- تشجير الدرس 8 - السيرة ا
+ لنبوية (id 609)\n- تفريغ الدرس 8 - السيرة النبو
+ ية (id 841)
+CATEGORIES:السيرة النبوية
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:albaji-20261202-98980364@ar-audio-to-md
+DTSTAMP:20261010T210501Z
+DTSTART;VALUE=DATE:20261202
+DTEND;VALUE=DATE:20261203
+SUMMARY:التوحيد و العقيدة : 2 document(s)
+DESCRIPTION:المستوى الأول\n- تشجير الدرس 8 - التو
+ حيد والعقيدة (id 595)\n- تفريغ الدرس 8 - التوحي
+ د والعقيدة (id 556)
+CATEGORIES:التوحيد و العقيدة
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:albaji-20261203-98061243@ar-audio-to-md
+DTSTAMP:20261010T210501Z
+DTSTART;VALUE=DATE:20261203
+DTEND;VALUE=DATE:20261204
+SUMMARY:النحو : 3 document(s)
+DESCRIPTION:المستوى الأول\n- تفريغ الدرس 8 - النح
+ و (id 569)\n- تلخيص النحو [8] - السنة الأولى (id 965
+ )\n- تشجير الدرس 8 - النحو (id 582)
+CATEGORIES:النحو
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:albaji-20261205-18345766@ar-audio-to-md
+DTSTAMP:20261010T210501Z
+DTSTART;VALUE=DATE:20261205
+DTEND;VALUE=DATE:20261206
+SUMMARY:الفقه : 2 document(s)
+DESCRIPTION:المستوى الأول\n- تلخيص الفقه [8] - الس
+ نة الأولى (id 1066)\n- تفريغ الفقه - السنة الأو
+ لى - 08 (id 517)
+CATEGORIES:الفقه
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:albaji-20261207-93270048@ar-audio-to-md
+DTSTAMP:20261010T210501Z
+DTSTART;VALUE=DATE:20261207
+DTEND;VALUE=DATE:20261208
+SUMMARY:السيرة النبوية : 3 document(s)
+DESCRIPTION:المستوى الأول\n- تلخيص السيرة [9] - ال
+ سنة الأولى (id 1036)\n- تشجير الدرس 9 - السيرة ا
+ لنبوية (id 610)\n- تفريغ الدرس 9 - السيرة النبو
+ ية (id 542)
+CATEGORIES:السيرة النبوية
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:albaji-20261209-98980364@ar-audio-to-md
+DTSTAMP:20261010T210501Z
+DTSTART;VALUE=DATE:20261209
+DTEND;VALUE=DATE:20261210
+SUMMARY:التوحيد و العقيدة : 2 document(s)
+DESCRIPTION:المستوى الأول\n- تفريغ الدرس 9 - التو
+ حيد والعقيدة (id 557)\n- تشجير الدرس 9 - التوحي
+ د والعقيدة (id 596)
+CATEGORIES:التوحيد و العقيدة
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:albaji-20261210-98061243@ar-audio-to-md
+DTSTAMP:20261010T210501Z
+DTSTART;VALUE=DATE:20261210
+DTEND;VALUE=DATE:20261211
+SUMMARY:النحو : 3 document(s)
+DESCRIPTION:المستوى الأول\n- تفريغ الدرس 9 - النح
+ و (id 570)\n- تشجير الدرس 9 - النحو (id 583)\n- تلخيص
+  النحو [9] - السنة الأولى (id 966)
+CATEGORIES:النحو
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:albaji-20261212-18345766@ar-audio-to-md
+DTSTAMP:20261010T210501Z
+DTSTART;VALUE=DATE:20261212
+DTEND;VALUE=DATE:20261213
+SUMMARY:الفقه : 2 document(s)
+DESCRIPTION:المستوى الأول\n- تلخيص الفقه [9] - الس
+ نة الأولى (id 1067)\n- تفريغ الفقه - السنة الأو
+ لى - 09 (id 524)
+CATEGORIES:الفقه
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:albaji-20261214-93270048@ar-audio-to-md
+DTSTAMP:20261010T210501Z
+DTSTART;VALUE=DATE:20261214
+DTEND;VALUE=DATE:20261215
+SUMMARY:السيرة النبوية : 3 document(s)
+DESCRIPTION:المستوى الأول\n- تشجير الدرس 10 - الس
+ يرة النبوية (id 611)\n- تفريغ الدرس 10 - السيرة 
+ النبوية (id 543)\n- تلخيص السيرة [10] - السنة ال
+ أولى (id 1037)
+CATEGORIES:السيرة النبوية
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:albaji-20261216-98980364@ar-audio-to-md
+DTSTAMP:20261010T210501Z
+DTSTART;VALUE=DATE:20261216
+DTEND;VALUE=DATE:20261217
+SUMMARY:التوحيد و العقيدة : 2 document(s)
+DESCRIPTION:المستوى الأول\n- تشجير الدرس 10 - الت
+ وحيد والعقيدة (id 597)\n- تفريغ الدرس 10 - التو
+ حيد والعقيدة (id 558)
+CATEGORIES:التوحيد و العقيدة
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:albaji-20261217-98061243@ar-audio-to-md
+DTSTAMP:20261010T210501Z
+DTSTART;VALUE=DATE:20261217
+DTEND;VALUE=DATE:20261218
+SUMMARY:النحو : 2 document(s)
+DESCRIPTION:المستوى الأول\n- تفريغ الدرس 10 - الن
+ حو (id 571)\n- تشجير الدرس 10 - النحو (id 584)
+CATEGORIES:النحو
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:albaji-20261219-18345766@ar-audio-to-md
+DTSTAMP:20261010T210501Z
+DTSTART;VALUE=DATE:20261219
+DTEND;VALUE=DATE:20261220
+SUMMARY:الفقه : 2 document(s)
+DESCRIPTION:المستوى الأول\n- تفريغ الفقه - السنة
+  الأولى - 10 (id 525)\n- تلخيص الفقه [10] - السنة ا
+ لأولى (id 1068)
+CATEGORIES:الفقه
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:albaji-20261221-93270048@ar-audio-to-md
+DTSTAMP:20261010T210501Z
+DTSTART;VALUE=DATE:20261221
+DTEND;VALUE=DATE:20261222
+SUMMARY:السيرة النبوية : 3 document(s)
+DESCRIPTION:المستوى الأول\n- تشجير الدرس 11 - الس
+ يرة النبوية (id 612)\n- تلخيص السيرة [11] - السن
+ ة الأولى (id 1038)\n- تلخيص السيرة [11] - السنة ا
+ لأولى (id 1038)
+CATEGORIES:السيرة النبوية
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:albaji-20261223-98980364@ar-audio-to-md
+DTSTAMP:20261010T210501Z
+DTSTART;VALUE=DATE:20261223
+DTEND;VALUE=DATE:20261224
+SUMMARY:التوحيد و العقيدة : 2 document(s)
+DESCRIPTION:المستوى الأول\n- تشجير الدرس 11 - الت
+ وحيد والعقيدة (id 598)\n- تفريغ الدرس 11 - التو
+ حيد والعقيدة (id 559)
+CATEGORIES:التوحيد و العقيدة
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:albaji-20261224-98061243@ar-audio-to-md
+DTSTAMP:20261010T210501Z
+DTSTART;VALUE=DATE:20261224
+DTEND;VALUE=DATE:20261225
+SUMMARY:النحو : 3 document(s)
+DESCRIPTION:المستوى الأول\n- تشجير الدرس 11 - الن
+ حو (id 587)\n- تلخيص النحو [11] - السنة الأولى (id 
+ 967)\n- تفريغ الدرس 11 - النحو (id 572)
+CATEGORIES:النحو
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:albaji-20261226-18345766@ar-audio-to-md
+DTSTAMP:20261010T210501Z
+DTSTART;VALUE=DATE:20261226
+DTEND;VALUE=DATE:20261227
+SUMMARY:الفقه : 2 document(s)
+DESCRIPTION:المستوى الأول\n- تفريغ الفقه - السنة
+  الأولى - 11 (id 526)\n- تلخيص الفقه [11] - السنة ا
+ لأولى (id 1069)
+CATEGORIES:الفقه
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:albaji-20261228-93270048@ar-audio-to-md
+DTSTAMP:20261010T210501Z
+DTSTART;VALUE=DATE:20261228
+DTEND;VALUE=DATE:20261229
+SUMMARY:السيرة النبوية : 3 document(s)
+DESCRIPTION:المستوى الأول\n- تلخيص السيرة [12 - ال
+ سنة الأولى (id 1039)\n- تشجير الدرس 12 - السيرة 
+ النبوية (id 613)\n- تفريغ الدرس 12 - السيرة الن
+ بوية (id 545)
+CATEGORIES:السيرة النبوية
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:albaji-20261230-98980364@ar-audio-to-md
+DTSTAMP:20261010T210501Z
+DTSTART;VALUE=DATE:20261230
+DTEND;VALUE=DATE:20261231
+SUMMARY:التوحيد و العقيدة : 2 document(s)
+DESCRIPTION:المستوى الأول\n- تفريغ الدرس 12 - الت
+ وحيد والعقيدة (id 560)\n- تشجير الدرس 12 - التو
+ حيد والعقيدة (id 599)
+CATEGORIES:التوحيد و العقيدة
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:albaji-20261231-98061243@ar-audio-to-md
+DTSTAMP:20261010T210501Z
+DTSTART;VALUE=DATE:20261231
+DTEND;VALUE=DATE:20270101
+SUMMARY:النحو : 3 document(s)
+DESCRIPTION:المستوى الأول\n- تفريغ الدرس 12 - الن
+ حو (id 573)\n- تشجير الدرس 12 - النحو (id 585)\n- تلخ
+ يص النحو [12] - السنة الأولى (id 968)
+CATEGORIES:النحو
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:albaji-20270102-18345766@ar-audio-to-md
+DTSTAMP:20261010T210501Z
+DTSTART;VALUE=DATE:20270102
+DTEND;VALUE=DATE:20270103
+SUMMARY:الفقه : 2 document(s)
+DESCRIPTION:المستوى الأول\n- تلخيص الفقه [12] - ال
+ سنة الأولى (id 1070)\n- تفريغ الدرس 12 - السنة ا
+ لأولى - الفقه (id 529)
+CATEGORIES:الفقه
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:albaji-20270104-93270048@ar-audio-to-md
+DTSTAMP:20261010T210501Z
+DTSTART;VALUE=DATE:20270104
+DTEND;VALUE=DATE:20270105
+SUMMARY:السيرة النبوية : 4 document(s)
+DESCRIPTION:المستوى الأول\n- تشجير الدرس 13 - الس
+ يرة النبوية (id 614)\n- تلخيص السيرة [13] - السن
+ ة الأولى (id 1040)\n- تفريغ الدرس 13 - السيرة ال
+ نبوية (id 546)\n- تفريغ الفصل الأول - السيرة ا
+ لنبوية * (id 620)
+CATEGORIES:السيرة النبوية
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:albaji-20270106-98980364@ar-audio-to-md
+DTSTAMP:20261010T210501Z
+DTSTART;VALUE=DATE:20270106
+DTEND;VALUE=DATE:20270107
+SUMMARY:التوحيد و العقيدة : 3 document(s)
+DESCRIPTION:المستوى الأول\n- تشجير الدرس 13 - الت
+ وحيد والعقيدة (id 600)\n- تفريغ الدرس 13 - التو
+ حيد والعقيدة (id 561)\n- تفريغ الفصل الأول - ا
+ لتوحيد والعقيدة * (id 619)
+CATEGORIES:التوحيد و العقيدة
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:albaji-20270107-98061243@ar-audio-to-md
+DTSTAMP:20261010T210501Z
+DTSTART;VALUE=DATE:20270107
+DTEND;VALUE=DATE:20270108
+SUMMARY:النحو : 4 document(s)
+DESCRIPTION:المستوى الأول\n- تفريغ الدرس 13 - الن
+ حو (id 574)\n- تفريغ الفصل الأول - النحو * (id 622)\
+ n- تلخيص النحو [13] - السنة الأولى (id 969)\n- تشج
+ ير الدرس 13 - النحو (id 586)
+CATEGORIES:النحو
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:albaji-20270109-18345766@ar-audio-to-md
+DTSTAMP:20261010T210501Z
+DTSTART;VALUE=DATE:20270109
+DTEND;VALUE=DATE:20270110
+SUMMARY:الفقه : 2 document(s)
+DESCRIPTION:المستوى الأول\n- تفريغ الدرس 13 - الف
+ قه - السنة الأولى (id 533)\n- تفريغ الفصل الأو
+ ل - الفقه * (id 621)
+CATEGORIES:الفقه
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:albaji-20270315-93270048@ar-audio-to-md
+DTSTAMP:20261010T210501Z
+DTSTART;VALUE=DATE:20270315
+DTEND;VALUE=DATE:20270316
+SUMMARY:السيرة النبوية : 3 document(s)
+DESCRIPTION:المستوى الأول\n- تلخيص السيرة [14] - ا
+ لسنة الأولى (id 1041)\n- تفريغ الدرس 14 - السيرة
+  (id 178)\n- تشجير الدرس 14 - السيرة (id 872)
+CATEGORIES:السيرة النبوية
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:albaji-20270317-98980364@ar-audio-to-md
+DTSTAMP:20261010T210501Z
+DTSTART;VALUE=DATE:20270317
+DTEND;VALUE=DATE:20270318
+SUMMARY:التوحيد و العقيدة : 2 document(s)
+DESCRIPTION:المستوى الأول\n- تفريغ الدرس 14 - الت
+ وحيد والعقيدة (id 179)\n- تشجير الدرس 14 - التو
+ حيد والعقيدة (id 860)
+CATEGORIES:التوحيد و العقيدة
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:albaji-20270318-98061243@ar-audio-to-md
+DTSTAMP:20261010T210501Z
+DTSTART;VALUE=DATE:20270318
+DTEND;VALUE=DATE:20270319
+SUMMARY:النحو : 3 document(s)
+DESCRIPTION:المستوى الأول\n- تشجير الدرس 14- النح
+ و (id 852)\n- تلخيص النحو [14] - السنة الأولى (id 97
+ 0)\n- تفريغ الدرس 14 - النحو (id 180)
+CATEGORIES:النحو
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:albaji-20270320-18345766@ar-audio-to-md
+DTSTAMP:20261010T210501Z
+DTSTART;VALUE=DATE:20270320
+DTEND;VALUE=DATE:20270321
+SUMMARY:الفقه : 2 document(s)
+DESCRIPTION:المستوى الأول\n- تفريغ الفقه - السنة
+  السنة الأولى - 14 (id 742)\n- تلخيص الفقه [14] - ا
+ لسنة الأولى (id 1071)
+CATEGORIES:الفقه
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:albaji-20270322-93270048@ar-audio-to-md
+DTSTAMP:20261010T210501Z
+DTSTART;VALUE=DATE:20270322
+DTEND;VALUE=DATE:20270323
+SUMMARY:السيرة النبوية : 3 document(s)
+DESCRIPTION:المستوى الأول\n- تفريغ الدرس 15 - الس
+ يرة النبوية (id 190)\n- تشجير الدرس 15 - السيرة 
+ (id 873)\n- تلخيص السيرة [15] - السنة الأولى (id 104
+ 2)
+CATEGORIES:السيرة النبوية
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:albaji-20270324-98980364@ar-audio-to-md
+DTSTAMP:20261010T210501Z
+DTSTART;VALUE=DATE:20270324
+DTEND;VALUE=DATE:20270325
+SUMMARY:التوحيد و العقيدة : 3 document(s)
+DESCRIPTION:المستوى الأول\n- تفريغ الدرس 15 - الت
+ وحيد والعقيدة (id 735)\n- تشجير الدرس 15 - التو
+ حيد والعقيدة (id 862)\n- تشجير الدرس 15 - التوح
+ يد والعقيدة (id 861)
+CATEGORIES:التوحيد و العقيدة
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:albaji-20270325-98061243@ar-audio-to-md
+DTSTAMP:20261010T210501Z
+DTSTART;VALUE=DATE:20270325
+DTEND;VALUE=DATE:20270326
+SUMMARY:النحو : 3 document(s)
+DESCRIPTION:المستوى الأول\n- تفريغ الدرس 15 - الن
+ حو (id 200)\n- تشجير الدرس 15- النحو (id 853)\n- تلخي
+ ص النحو [15] - السنة الأولى (id 971)
+CATEGORIES:النحو
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:albaji-20270327-18345766@ar-audio-to-md
+DTSTAMP:20261010T210501Z
+DTSTART;VALUE=DATE:20270327
+DTEND;VALUE=DATE:20270328
+SUMMARY:الفقه : 2 document(s)
+DESCRIPTION:المستوى الأول\n- تلخيص الفقه [15] - ال
+ سنة الأولى (id 1072)\n- تفريغ الدرس 15 - الفقه - 
+ السنة الأولى (id 740)
+CATEGORIES:الفقه
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:albaji-20270426-93270048@ar-audio-to-md
+DTSTAMP:20261010T210501Z
+DTSTART;VALUE=DATE:20270426
+DTEND;VALUE=DATE:20270427
+SUMMARY:السيرة النبوية : 3 document(s)
+DESCRIPTION:المستوى الأول\n- تشجير الدرس 16 - الس
+ يرة (id 874)\n- تلخيص السيرة [16] - السنة الأولى 
+ (id 1043)\n- تفريغ الدرس 16 - السيرة النبوية (id 52
+ 0)
+CATEGORIES:السيرة النبوية
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:albaji-20270428-98980364@ar-audio-to-md
+DTSTAMP:20261010T210501Z
+DTSTART;VALUE=DATE:20270428
+DTEND;VALUE=DATE:20270429
+SUMMARY:التوحيد و العقيدة : 3 document(s)
+DESCRIPTION:المستوى الأول\n- تفريغ الدرس 16 - الت
+ وحيد والعقيدة (id 205)\n- تشجير الدرس 16 - التو
+ حيد والعقيدة (id 863)\n- تلخيص التوحيد والعقي
+ دة [16] - السنة الأولى (id 1050)
+CATEGORIES:التوحيد و العقيدة
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:albaji-20270429-98061243@ar-audio-to-md
+DTSTAMP:20261010T210501Z
+DTSTART;VALUE=DATE:20270429
+DTEND;VALUE=DATE:20270430
+SUMMARY:النحو : 2 document(s)
+DESCRIPTION:المستوى الأول\n- تشجير الدرس 16 - الن
+ حو (id 854)\n- تفريغ الدرس 16 - النحو (id 207)
+CATEGORIES:النحو
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:albaji-20270501-18345766@ar-audio-to-md
+DTSTAMP:20261010T210501Z
+DTSTART;VALUE=DATE:20270501
+DTEND;VALUE=DATE:20270502
+SUMMARY:الفقه : 2 document(s)
+DESCRIPTION:المستوى الأول\n- تفريغ الدرس 16 - الف
+ قه - السنة الأولى (id 747)\n- تلخيص الفقه [16] - ا
+ لسنة الأولى (id 1073)
+CATEGORIES:الفقه
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:albaji-20270503-93270048@ar-audio-to-md
+DTSTAMP:20261010T210501Z
+DTSTART;VALUE=DATE:20270503
+DTEND;VALUE=DATE:20270504
+SUMMARY:السيرة النبوية : 3 document(s)
+DESCRIPTION:المستوى الأول\n- تلخيص السيرة [17] - ا
+ لسنة الأولى (id 1044)\n- تفريغ الدرس 17 - السيرة
+  (id 232)\n- تشجير الدرس 17 - السيرة (id 876)
+CATEGORIES:السيرة النبوية
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:albaji-20270505-98980364@ar-audio-to-md
+DTSTAMP:20261010T210501Z
+DTSTART;VALUE=DATE:20270505
+DTEND;VALUE=DATE:20270506
+SUMMARY:التوحيد و العقيدة : 3 document(s)
+DESCRIPTION:المستوى الأول\n- تلخيص التوحيد والع
+ قيدة [17] - السنة الأولى (id 1051)\n- تفريغ الدرس
+  17 - التوحيد والعقيدة (id 231)\n- تشجير الدرس 17
+  - التوحيد والعقيدة (id 864)
+CATEGORIES:التوحيد و العقيدة
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:albaji-20270506-98061243@ar-audio-to-md
+DTSTAMP:20261010T210501Z
+DTSTART;VALUE=DATE:20270506
+DTEND;VALUE=DATE:20270507
+SUMMARY:النحو : 3 document(s)
+DESCRIPTION:المستوى الأول\n- تلخيص النحو [17] - ال
+ سنة الأولى (id 972)\n- تفريغ الدرس 17 - النحو (id 
+ 230)\n- تشجير الدرس 17 - النحو (id 856)
+CATEGORIES:النحو
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:albaji-20270508-18345766@ar-audio-to-md
+DTSTAMP:20261010T210501Z
+DTSTART;VALUE=DATE:20270508
+DTEND;VALUE=DATE:20270509
+SUMMARY:الفقه : 2 document(s)
+DESCRIPTION:المستوى الأول\n- تفريغ الدرس 17- الفق
+ ه - السنة الأولى (id 756)\n- تلخيص الفقه [17] - ال
+ سنة الأولى (id 1074)
+CATEGORIES:الفقه
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:albaji-20270510-93270048@ar-audio-to-md
+DTSTAMP:20261010T210501Z
+DTSTART;VALUE=DATE:20270510
+DTEND;VALUE=DATE:20270511
+SUMMARY:السيرة النبوية : 3 document(s)
+DESCRIPTION:المستوى الأول\n- تفريغ الدرس 18 - الس
+ يرة النبوية (id 779)\n- تلخيص السيرة [18] - السن
+ ة الأولى (id 1045)\n- تشجير الدرس 18 - السيرة (id 8
+ 75)
+CATEGORIES:السيرة النبوية
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:albaji-20270512-98980364@ar-audio-to-md
+DTSTAMP:20261010T210501Z
+DTSTART;VALUE=DATE:20270512
+DTEND;VALUE=DATE:20270513
+SUMMARY:التوحيد و العقيدة : 3 document(s)
+DESCRIPTION:المستوى الأول\n- تفريغ الدرس 18 - الت
+ وحيد والعقيدة (id 227)\n- تلخيص التوحيد والعق
+ يدة [18] - السنة الأولى (id 1052)\n- تشجير الدرس 1
+ 8 - التوحيد والعقيدة (id 865)
+CATEGORIES:التوحيد و العقيدة
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:albaji-20270513-98061243@ar-audio-to-md
+DTSTAMP:20261010T210501Z
+DTSTART;VALUE=DATE:20270513
+DTEND;VALUE=DATE:20270514
+SUMMARY:النحو : 3 document(s)
+DESCRIPTION:المستوى الأول\n- تلخيص النحو [18] - ال
+ سنة الأولى (id 973)\n- تشجير الدرس 18 - النحو (id 
+ 857)\n- تفريغ الدرس 18 - النحو (id 226)
+CATEGORIES:النحو
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:albaji-20270515-18345766@ar-audio-to-md
+DTSTAMP:20261010T210501Z
+DTSTART;VALUE=DATE:20270515
+DTEND;VALUE=DATE:20270516
+SUMMARY:الفقه : 2 document(s)
+DESCRIPTION:المستوى الأول\n- تلخيص الفقه [18] - ال
+ سنة الأولى (id 1075)\n- تفريغ الدرس 18 - الفقه - 
+ السنة الأولى (id 780)
+CATEGORIES:الفقه
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:albaji-20270517-93270048@ar-audio-to-md
+DTSTAMP:20261010T210501Z
+DTSTART;VALUE=DATE:20270517
+DTEND;VALUE=DATE:20270518
+SUMMARY:السيرة النبوية : 3 document(s)
+DESCRIPTION:المستوى الأول\n- تشجير الدرس 19 - الس
+ يرة (id 877)\n- تلخيص السيرة [19] - السنة الأولى 
+ (id 1046)\n- تفريغ الدرس 19 - السيرة النبوية (id 23
+ 9)
+CATEGORIES:السيرة النبوية
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:albaji-20270519-98980364@ar-audio-to-md
+DTSTAMP:20261010T210501Z
+DTSTART;VALUE=DATE:20270519
+DTEND;VALUE=DATE:20270520
+SUMMARY:التوحيد و العقيدة : 3 document(s)
+DESCRIPTION:المستوى الأول\n- تشجير الدرس 19 - الت
+ وحيد والعقيدة (id 866)\n- تلخيص التوحيد والعق
+ يدة [19] - السنة الأولى (id 1053)\n- تفريغ الدرس 1
+ 9 - التوحيد والعقيدة (id 250)
+CATEGORIES:التوحيد و العقيدة
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:albaji-20270520-98061243@ar-audio-to-md
+DTSTAMP:20261010T210501Z
+DTSTART;VALUE=DATE:20270520
+DTEND;VALUE=DATE:20270521
+SUMMARY:النحو : 3 document(s)
+DESCRIPTION:المستوى الأول\n- تشجير الدرس 19 - الن
+ حو (id 858)\n- تفريغ الدرس 19 - النحو (id 252)\n- تلخ
+ يص النحو [19] - السنة الأولى (id 974)
+CATEGORIES:النحو
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:albaji-20270522-18345766@ar-audio-to-md
+DTSTAMP:20261010T210501Z
+DTSTART;VALUE=DATE:20270522
+DTEND;VALUE=DATE:20270523
+SUMMARY:الفقه : 2 document(s)
+DESCRIPTION:المستوى الأول\n- تفريغ الدرس 19 - الف
+ قه - السنة الأولى (id 770)\n- تلخيص الفقه [19] - ا
+ لسنة الأولى (id 1079)
+CATEGORIES:الفقه
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:albaji-20270524-93270048@ar-audio-to-md
+DTSTAMP:20261010T210501Z
+DTSTART;VALUE=DATE:20270524
+DTEND;VALUE=DATE:20270525
+SUMMARY:السيرة النبوية : 3 document(s)
+DESCRIPTION:المستوى الأول\n- تشجير الدرس 20 - الس
+ يرة (id 878)\n- تفريغ الدرس 20 - السيرة النبوية 
+ (id 258)\n- تلخيص السيرة [20] - السنة الأولى (id 104
+ 7)
+CATEGORIES:السيرة النبوية
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:albaji-20270526-98980364@ar-audio-to-md
+DTSTAMP:20261010T210501Z
+DTSTART;VALUE=DATE:20270526
+DTEND;VALUE=DATE:20270527
+SUMMARY:التوحيد و العقيدة : 3 document(s)
+DESCRIPTION:المستوى الأول\n- تفريغ الدرس 20 - الت
+ وحيد والعقيدة (id 261)\n- تلخيص التوحيد والعق
+ يدة [20] - السنة الأولى (id 1054)\n- تشجير الدرس 2
+ 0 - التوحيد والعقيدة (id 867)
+CATEGORIES:التوحيد و العقيدة
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:albaji-20270527-98061243@ar-audio-to-md
+DTSTAMP:20261010T210501Z
+DTSTART;VALUE=DATE:20270527
+DTEND;VALUE=DATE:20270528
+SUMMARY:النحو : 3 document(s)
+DESCRIPTION:المستوى الأول\n- تشجير الدرس 20 - الن
+ حو (id 859)\n- تلخيص النحو [20] - السنة الأولى (id 
+ 975)\n- تفريغ الدرس 20 - النحو (id 262)
+CATEGORIES:النحو
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:albaji-20270529-18345766@ar-audio-to-md
+DTSTAMP:20261010T210501Z
+DTSTART;VALUE=DATE:20270529
+DTEND;VALUE=DATE:20270530
+SUMMARY:الفقه : 2 document(s)
+DESCRIPTION:المستوى الأول\n- تفريغ الدرس 20 - الف
+ قه - السنة الأولى (id 773)\n- تلخيص الفقه [20] - ا
+ لسنة الأولى (id 1077)
+CATEGORIES:الفقه
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:albaji-20270531-93270048@ar-audio-to-md
+DTSTAMP:20261010T210501Z
+DTSTART;VALUE=DATE:20270531
+DTEND;VALUE=DATE:20270601
+SUMMARY:السيرة النبوية : 3 document(s)
+DESCRIPTION:المستوى الأول\n- تلخيص السيرة [21] - ا
+ لسنة الأولى (id 1048)\n- تشجير الدرس 21 - السيرة
+  (id 879)\n- تفريغ الدرس 21 - السيرة النبوية (id 26
+ 7)
+CATEGORIES:السيرة النبوية
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:albaji-20270602-98980364@ar-audio-to-md
+DTSTAMP:20261010T210501Z
+DTSTART;VALUE=DATE:20270602
+DTEND;VALUE=DATE:20270603
+SUMMARY:التوحيد و العقيدة : 3 document(s)
+DESCRIPTION:المستوى الأول\n- تشجير الدرس 21 - الت
+ وحيد والعقيدة (id 868)\n- تفريغ الدرس 21 - التو
+ حيد والعقيدة (id 268)\n- تلخيص التوحيد والعقي
+ دة [21] - السنة الأولى (id 1055)
+CATEGORIES:التوحيد و العقيدة
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:albaji-20270603-98061243@ar-audio-to-md
+DTSTAMP:20261010T210501Z
+DTSTART;VALUE=DATE:20270603
+DTEND;VALUE=DATE:20270604
+SUMMARY:النحو : 3 document(s)
+DESCRIPTION:المستوى الأول\n- تفريغ الدرس 21 - الن
+ حو (id 270)\n- تلخيص النحو [21] - السنة الأولى (id 
+ 976)\n- تشجير الدرس 21 - النحو (id 1090)
+CATEGORIES:النحو
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:albaji-20270605-18345766@ar-audio-to-md
+DTSTAMP:20261010T210501Z
+DTSTART;VALUE=DATE:20270605
+DTEND;VALUE=DATE:20270606
+SUMMARY:الفقه : 2 document(s)
+DESCRIPTION:المستوى الأول\n- تلخيص الفقه [21] - ال
+ سنة الأولى (id 1081)\n- تفريغ الدرس 21 - الفقه - 
+ السنة الأولى (id 1085)
+CATEGORIES:الفقه
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:albaji-20270607-93270048@ar-audio-to-md
+DTSTAMP:20261010T210501Z
+DTSTART;VALUE=DATE:20270607
+DTEND;VALUE=DATE:20270608
+SUMMARY:السيرة النبوية : 3 document(s)
+DESCRIPTION:المستوى الأول\n- تفريغ الدرس 22 - الس
+ يرة النبوية (id 279)\n- تشجير الدرس 22 - السيرة 
+ (id 880)\n- تلخيص السيرة [22] - السنة الأولى (id 104
+ 9)
+CATEGORIES:السيرة النبوية
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:albaji-20270609-98980364@ar-audio-to-md
+DTSTAMP:20261010T210501Z
+DTSTART;VALUE=DATE:20270609
+DTEND;VALUE=DATE:20270610
+SUMMARY:التوحيد و العقيدة : 3 document(s)
+DESCRIPTION:المستوى الأول\n- تلخيص التوحيد والع
+ قيدة [22] - السنة الأولى (id 1056)\n- تفريغ الدرس
+  22 - التوحيد والعقيدة (id 283)\n- تشجير الدرس 22
+  - التوحيد والعقيدة (id 869)
+CATEGORIES:التوحيد و العقيدة
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:albaji-20270612-18345766@ar-audio-to-md
+DTSTAMP:20261010T210501Z
+DTSTART;VALUE=DATE:20270612
+DTEND;VALUE=DATE:20270613
+SUMMARY:الفقه : 2 document(s)
+DESCRIPTION:المستوى الأول\n- تلخيص الفقه [22] - ال
+ سنة الأولى (id 1080)\n- تفريغ الدرس 22 - الفقه - 
+ السنة الأولى (id 781)
+CATEGORIES:الفقه
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:albaji-20270614-18345766@ar-audio-to-md
+DTSTAMP:20261010T210501Z
+DTSTART;VALUE=DATE:20270614
+DTEND;VALUE=DATE:20270615
+SUMMARY:الفقه : 2 document(s)
+DESCRIPTION:المستوى الأول\n- تلخيص الفقه [23] - ال
+ سنة الأولى (id 1082)\n- تفريغ الدرس 23 - الفقه - 
+ السنة الأولى (id 955)
+CATEGORIES:الفقه
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:albaji-20270616-98980364@ar-audio-to-md
+DTSTAMP:20261010T210501Z
+DTSTART;VALUE=DATE:20270616
+DTEND;VALUE=DATE:20270617
+SUMMARY:التوحيد و العقيدة : 3 document(s)
+DESCRIPTION:المستوى الأول\n- تفريغ الدرس 23 - الت
+ وحيد والعقيدة (id 284)\n- تشجير الدرس 23 - التو
+ حيد والعقيدة (id 870)\n- تلخيص التوحيد والعقي
+ دة [23] - السنة الأولى (id 1057)
+CATEGORIES:التوحيد و العقيدة
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:albaji-20270619-18345766@ar-audio-to-md
+DTSTAMP:20261010T210501Z
+DTSTART;VALUE=DATE:20270619
+DTEND;VALUE=DATE:20270620
+SUMMARY:الفقه : 2 document(s)
+DESCRIPTION:المستوى الأول\n- تلخيص الفقه [24] - ال
+ سنة الأولى (id 1083)\n- تفريغ الدرس 24 - الفقه - 
+ السنة الأولى (id 956)
+CATEGORIES:الفقه
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:albaji-20270621-18345766@ar-audio-to-md
+DTSTAMP:20261010T210501Z
+DTSTART;VALUE=DATE:20270621
+DTEND;VALUE=DATE:20270622
+SUMMARY:الفقه : 2 document(s)
+DESCRIPTION:المستوى الأول\n- تفريغ الدرس 25 - الف
+ قه - السنة الأولى (id 957)\n- تلخيص الفقه [25] - ا
+ لسنة الأولى (id 1084)
+CATEGORIES:الفقه
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:albaji-20270623-98980364@ar-audio-to-md
+DTSTAMP:20261010T210501Z
+DTSTART;VALUE=DATE:20270623
+DTEND;VALUE=DATE:20270624
+SUMMARY:التوحيد و العقيدة : 3 document(s)
+DESCRIPTION:المستوى الأول\n- تشجير الدرس 24 - الت
+ وحيد والعقيدة (id 871)\n- تلخيص التوحيد والعق
+ يدة [24] - السنة الأولى (id 1058)\n- تفريغ الدرس 2
+ 4 - التوحيد والعقيدة (id 299)
+CATEGORIES:التوحيد و العقيدة
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:albaji-20270626-18345766@ar-audio-to-md
+DTSTAMP:20261010T210501Z
+DTSTART;VALUE=DATE:20270626
+DTEND;VALUE=DATE:20270627
+SUMMARY:الفقه : 1 document(s)
+DESCRIPTION:المستوى الأول\n- تفريغ الدرس 25 - الف
+ قه - السنة الأولى (id 784)
+CATEGORIES:الفقه
+TRANSP:TRANSPARENT
+END:VEVENT
+END:VCALENDAR
