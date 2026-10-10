@@ -78,6 +78,64 @@ ar_audioToMd/
 └── secondBrain/      # le vault Obsidian, dépôt git séparé (ignoré ici)
 ```
 
+## Plateforme de l'académie (API) et programme 2026-2027
+
+Les scripts `get_attachments.py` et `make_calendar.py` lisent l'API de la plateforme
+(`https://baji.irchademy.irchad-backends.com/api`, en-tête `x-tenant-key: baji`, jeton Bearer de
+24 h dans `attachments/token.txt`, hors git). Chiffres relevés le 10 octobre 2026 pour le compte
+étudiant, niveau 1, groupe « 2026-2027 - المستوى الأول ».
+
+### Année et phases (`groups/active/me`)
+
+| Période | Dates |
+|---|---|
+| Année scolaire | 4 octobre 2026 → 11 juillet 2027 (inscriptions jusqu'au 31 octobre 2026) |
+| Phase 1 | 5 octobre 2026 → 9 janvier 2027 (25 semaines) |
+| Pause entre les phases | 10 janvier → 13 mars 2027 (englobe Ramadan 1448, ≈ 8 février → 9 mars) |
+| Phase 2 | 14 mars → 4 juillet 2027 (25 semaines) |
+
+### Matières du niveau 1 (`subjects/level/1/is-active/true`)
+
+الفقه · التوحيد و العقيدة · النحو · التجويد · السيرة النبوية · التزكية والأخلاق (toutes de
+catégorie MAIN, coefficient 1). Les quatre niveaux du cursus ont chacun deux phases.
+
+### Leçons vidéo programmées (`student-tasks/me`)
+
+116 leçons du 12 octobre 2026 au 26 juin 2027, une par jour de cours, 65 en phase 1 et 51 en
+phase 2. Le lien YouTube d'une leçon n'est exposé qu'à son ouverture.
+
+| Matière | Leçons |
+|---|---|
+| الفقه | 26 |
+| التوحيد و العقيدة | 24 |
+| التجويد | 23 |
+| السيرة النبوية | 22 |
+| النحو | 21 |
+
+### Documents de cours (`attachments?level=1`)
+
+238 documents PDF, débloqués un à un du 12 octobre 2026 au 26 juin 2027 (aucun en février).
+Trois types : تفريغ (transcription officielle de la leçon), تشجير (schéma), تلخيص (résumé).
+L'URL d'un document n'apparaît qu'à sa date de déblocage ; les fichiers sont servis depuis S3
+sans authentification et sont des PDF Word avec texte sélectionnable.
+
+| Matière | Documents |
+|---|---|
+| السيرة النبوية | 65 |
+| النحو | 62 |
+| التوحيد و العقيدة | 59 |
+| الفقه | 52 |
+
+### Fichiers produits dans `attachments/`
+
+- `attachments.json` : liste brute des documents ; `index.tsv` : la même en tableau avec la date de déblocage.
+- `program.json` : programme brut (phases, semaines, leçons) ; `program.tsv` : une ligne par leçon (date, phase, semaine, matière, id, ouverte, lien vidéo).
+- `cours_albaji.ics` : calendrier unique, 358 événements (116 leçons, 237 documents, année, phases, pause, Ramadan).
+- `pdf/<niveau>/<matière>/` : les PDF téléchargés (hors git).
+
+Relance hebdomadaire : `./get_attachments.py --fetch` puis `./make_calendar.py`, après avoir
+recollé un jeton valide.
+
 ## À venir
 
 - `sources.txt` : liste d'URL YouTube (vidéos, playlists) et de livres à traiter automatiquement.
