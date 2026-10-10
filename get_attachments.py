@@ -105,6 +105,9 @@ def main():
         token = args.token or os.environ.get("ALBAJI_TOKEN") or (TOKEN_FILE.read_text().strip() if TOKEN_FILE.exists() else "")
         if not token:
             sys.exit("--fetch exige un jeton : --token, variable ALBAJI_TOKEN ou fichier attachments/token.txt")
+        # tolérer un en-tête copié tel quel : "Authorization: Bearer xxx", "Bearer xxx", avec ou sans guillemets
+        token = re.sub(r"^\s*Authorization\s*:\s*", "", token, flags=re.I)
+        token = re.sub(r"^\s*Bearer\s+", "", token, flags=re.I).strip().strip("\"'")
         args.token = token
         print("Récupération de la liste depuis l'API …")
         js = fetch_all(args.api, args.token, args.level)
