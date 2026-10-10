@@ -32,6 +32,8 @@ TOKEN_FILE = ATT / "token.txt"          # jeton Bearer de la plateforme, hors gi
 JSON_FILE = ATT / "attachments.json"
 PDF_DIR = ATT / "pdf"
 INDEX = ATT / "index.tsv"
+PROGRAM = ATT / "program.json"          # programme de l'année (student-tasks/me) : phases, semaines, leçons
+PROGRAM_TSV = ATT / "program.tsv"
 UA = {"User-Agent": "Mozilla/5.0 (X11; Linux x86_64) ar-audio-to-md"}
 # en-têtes envoyés par l'application de la plateforme (vus dans l'onglet Réseau)
 API_HEADERS = {"x-tenant-key": "baji", "Origin": "https://dashboard.albajiacademy.com", "Referer": "https://dashboard.albajiacademy.com/"}
@@ -54,6 +56,32 @@ def fetch_all(api, token, level, limit=100):
             break
         page += 1
     return {"data": data, "total": len(data)}
+
+
+def fetch_program(api, token):
+    """Programme de l'étudiant : leçons par semaine avec date, matière et, une fois ouvertes, lien vidéo."""
+    req = urllib.request.Request(f"{api.rstrip('/')}/student-tasks/me",
+                                 headers={**UA, **API_HEADERS, "Authorization": f"Bearer {token}", "Accept": "application/json"})
+    with urllib.request.urlopen(req, timeout=60) as r:
+        prog = json.load(r)
+    PROGRAM.write_text(json.dumps(prog, ensure_ascii=False, indent=1), encoding="utf-8")
+    rows = []
+    for g in prog.get("groups", []):
+        for ph in g.get("phases", []):
+            for w in ph.get("weeks", []):
+                for t in w.get("tasks", []):
+                    subj = (t.get("subject") or {}).get("title", "")
+                    rows.append([t["taskDate"][:10], str(ph.get("order", "")), str(w.get("order", "")), subj, t["name"],
+                                 str(t["id"]), "non" if t.get("isDisabled") else "oui", t.get("videoUrl") or ""])
+    rows.sort()
+    PROGRAM_TSV.write_text("date\tphase\tsemaine\tmatière\tleçon\tid\touverte\tvideoUrl\n" +
+                           "\n".join("\t".join(r) for r in rows) + "\n", encoding="utf-8")
+    opened = [r for r in rows if r[6] == "oui"]
+    with_video = [r for r in rows if r[7]]
+    print(f"Programme : {len(rows)} leçons, {len(opened)} ouverte(s), {len(with_video)} avec lien vidéo -> {PROGRAM_TSV}")
+    for r in with_video:
+        print(f"  {r[0]} {r[3]} — {r[4]} : {r[7]}")
+    return prog
 
 
 def safe_name(s):
@@ -115,6 +143,10 @@ def main():
         js = fetch_all(args.api, args.token, args.level)
         JSON_FILE.write_text(json.dumps(js, ensure_ascii=False, indent=1), encoding="utf-8")
         print(f"{js['total']} éléments enregistrés dans {JSON_FILE}")
+        try:
+            fetch_program(args.api, args.token)
+        except Exception as e:
+            print(f"  (programme non récupéré : {e})")
     items = json.load(open(JSON_FILE, encoding="utf-8"))["data"]
 
     todo = [i for i in items if i.get("url")]

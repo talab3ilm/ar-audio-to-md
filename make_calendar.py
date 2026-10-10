@@ -131,6 +131,23 @@ def main():
             periods.append(period("albaji-break@ar-audio-to-md", a, b, "عطلة بين المرحلتين (رمضان)",
                                   "Pas de cours entre les deux phases", stamp))
         print(f"{len(periods)} périodes ajoutées depuis le groupe actif")
+    # Leçons du programme (student-tasks/me, enregistré par get_attachments.py --fetch)
+    prog_file = ATT / "program.json"
+    if prog_file.exists():
+        prog = json.load(open(prog_file, encoding="utf-8"))
+        n = 0
+        for g in prog.get("groups", []):
+            for ph in g.get("phases", []):
+                for w in ph.get("weeks", []):
+                    for t in w.get("tasks", []):
+                        subject = (t.get("subject") or {}).get("title", "")
+                        day = dt.date.fromisoformat(t["taskDate"][:10])
+                        desc = f"{subject} — المرحلة {ph.get('order')}، الأسبوع {w.get('order')}\nid {t['id']} · {t.get('type', '')}"
+                        if t.get("videoUrl"):
+                            desc += f"\n{t['videoUrl']}"
+                        events.append(event(f"albaji-lesson-{t['id']}@ar-audio-to-md", day, f"🎥 {t['name']}", desc, subject, stamp))
+                        n += 1
+        print(f"{n} leçons ajoutées depuis le programme")
     periods.append(period("ramadan-1448@ar-audio-to-md", RAMADAN[0], RAMADAN[1], "رمضان ١٤٤٨ (تقديري)",
                           "Dates astronomiques prévues, à confirmer par l'observation", stamp))
     events = periods + events

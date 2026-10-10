@@ -1,0 +1,2310 @@
+{
+ "level": 1,
+ "levelName": "المستوى الأول",
+ "percentage": 0,
+ "currentMonthPercentage": 0,
+ "currentYearPercentage": 0,
+ "studentId": 17000,
+ "activeGroupId": 17,
+ "activeTaskId": null,
+ "activePhaseId": 11,
+ "activeWeekId": null,
+ "groups": [
+  {
+   "id": 17,
+   "name": "2026-2027 - المستوى الأول",
+   "isActive": true,
+   "isPaymentRequired": true,
+   "phases": [
+    {
+     "id": 12,
+     "order": 2,
+     "startDate": "2027-03-14",
+     "completedPercentage": 0,
+     "taskCount": 51,
+     "completedTasks": 0,
+     "weeks": [
+      {
+       "id": 26,
+       "order": 1,
+       "startDate": "2027-03-14",
+       "endDate": "2027-03-20",
+       "completedTasks": 0,
+       "isHoliday": false,
+       "holidayName": "",
+       "tasks": [
+        {
+         "id": 1213,
+         "name": "الدرس [14] التجويد",
+         "type": "Video",
+         "dayOfWeek": 2,
+         "isCompleted": false,
+         "requireManualCompletion": true,
+         "isExerciseMandatory": false,
+         "taskDate": "2027-03-16T00:00:00.000Z",
+         "isDisabled": true,
+         "subject": {
+          "id": 8,
+          "title": "التجويد"
+         }
+        },
+        {
+         "id": 922,
+         "name": "الدرس [14] الفقه",
+         "type": "Video",
+         "dayOfWeek": 6,
+         "isCompleted": false,
+         "requireManualCompletion": true,
+         "isExerciseMandatory": false,
+         "taskDate": "2027-03-20T00:00:00.000Z",
+         "isDisabled": true,
+         "subject": {
+          "id": 11,
+          "title": "الفقه"
+         }
+        },
+        {
+         "id": 108,
+         "name": "الدرس [14] النحو",
+         "type": "Video",
+         "dayOfWeek": 4,
+         "isCompleted": false,
+         "requireManualCompletion": true,
+         "isExerciseMandatory": false,
+         "taskDate": "2027-03-18T00:00:00.000Z",
+         "isDisabled": true,
+         "subject": {
+          "id": 10,
+          "title": "النحو"
+         }
+        },
+        {
+         "id": 79,
+         "name": "الدرس [14] التوحيد و العقيدة",
+         "type": "Video",
+         "dayOfWeek": 3,
+         "isCompleted": false,
+         "requireManualCompletion": true,
+         "isExerciseMandatory": false,
+         "taskDate": "2027-03-17T00:00:00.000Z",
+         "isDisabled": true,
+         "subject": {
+          "id": 9,
+          "title": "التوحيد و العقيدة"
+         }
+        },
+        {
+         "id": 21,
+         "name": "الدرس [14] السيرة النبوية",
+         "type": "Video",
+         "dayOfWeek": 1,
+         "isCompleted": false,
+         "requireManualCompletion": true,
+         "isExerciseMandatory": false,
+         "taskDate": "2027-03-15T00:00:00.000Z",
+         "isDisabled": true,
+         "subject": {
+          "id": 7,
+          "title": "السيرة النبوية"
+         }
+        }
+       ]
+      },
+      {
+       "id": 27,
+       "order": 2,
+       "startDate": "2027-03-21",
+       "endDate": "2027-03-27",
+       "completedTasks": 0,
+       "isHoliday": false,
+       "holidayName": "",
+       "tasks": [
+        {
+         "id": 1214,
+         "name": "الدرس [15] التجويد",
+         "type": "Video",
+         "dayOfWeek": 2,
+         "isCompleted": false,
+         "requireManualCompletion": true,
+         "isExerciseMandatory": false,
+         "taskDate": "2027-03-23T00:00:00.000Z",
+         "isDisabled": true,
+         "subject": {
+          "id": 8,
+          "title": "التجويد"
+         }
+        },
+        {
+         "id": 109,
+         "name": "الدرس [15] النحو",
+         "type": "Video",
+         "dayOfWeek": 4,
+         "isCompleted": false,
+         "requireManualCompletion": true,
+         "isExerciseMandatory": false,
+         "taskDate": "2027-03-25T00:00:00.000Z",
+         "isDisabled": true,
+         "subject": {
+          "id": 10,
+          "title": "النحو"
+         }
+        },
+        {
+         "id": 918,
+         "name": "الدرس [15] الفقه",
+         "type": "Video",
+         "dayOfWeek": 6,
+         "isCompleted": false,
+         "requireManualCompletion": true,
+         "isExerciseMandatory": false,
+         "taskDate": "2027-03-27T00:00:00.000Z",
+         "isDisabled": true,
+         "subject": {
+          "id": 11,
+          "title": "الفقه"
+         }
+        },
+        {
+         "id": 80,
+         "name": "الدرس [15] التوحيد و العقيدة",
+         "type": "Video",
+         "dayOfWeek": 3,
+         "isCompleted": false,
+         "requireManualCompletion": true,
+         "isExerciseMandatory": false,
+         "taskDate": "2027-03-24T00:00:00.000Z",
+         "isDisabled": true,
+         "subject": {
+          "id": 9,
+          "title": "التوحيد و العقيدة"
+         }
+        },
+        {
+         "id": 22,
+         "name": "الدرس [15] السيرة النبوية",
+         "type": "Video",
+         "dayOfWeek": 1,
+         "isCompleted": false,
+         "requireManualCompletion": true,
+         "isExerciseMandatory": false,
+         "taskDate": "2027-03-22T00:00:00.000Z",
+         "isDisabled": true,
+         "subject": {
+          "id": 7,
+          "title": "السيرة النبوية"
+         }
+        }
+       ]
+      },
+      {
+       "id": 28,
+       "order": 3,
+       "startDate": "2027-03-28",
+       "endDate": "2027-04-03",
+       "completedTasks": 0,
+       "isHoliday": false,
+       "holidayName": "",
+       "tasks": [
+        {
+         "id": 1215,
+         "name": "الدرس [16] التجويد",
+         "type": "Video",
+         "dayOfWeek": 2,
+         "isCompleted": false,
+         "requireManualCompletion": true,
+         "isExerciseMandatory": false,
+         "taskDate": "2027-03-30T00:00:00.000Z",
+         "isDisabled": true,
+         "subject": {
+          "id": 8,
+          "title": "التجويد"
+         }
+        }
+       ]
+      },
+      {
+       "id": 29,
+       "order": 4,
+       "startDate": "2027-04-04",
+       "endDate": "2027-04-10",
+       "completedTasks": 0,
+       "isHoliday": false,
+       "holidayName": "",
+       "tasks": [
+        {
+         "id": 1216,
+         "name": "الدرس [17] التجويد",
+         "type": "Video",
+         "dayOfWeek": 2,
+         "isCompleted": false,
+         "requireManualCompletion": true,
+         "isExerciseMandatory": false,
+         "taskDate": "2027-04-06T00:00:00.000Z",
+         "isDisabled": true,
+         "subject": {
+          "id": 8,
+          "title": "التجويد"
+         }
+        }
+       ]
+      },
+      {
+       "id": 30,
+       "order": 5,
+       "startDate": "2027-04-11",
+       "endDate": "2027-04-17",
+       "completedTasks": 0,
+       "isHoliday": false,
+       "holidayName": "",
+       "tasks": [
+        {
+         "id": 1217,
+         "name": "الدرس [18] التجويد",
+         "type": "Video",
+         "dayOfWeek": 2,
+         "isCompleted": false,
+         "requireManualCompletion": true,
+         "isExerciseMandatory": false,
+         "taskDate": "2027-04-13T00:00:00.000Z",
+         "isDisabled": true,
+         "subject": {
+          "id": 8,
+          "title": "التجويد"
+         }
+        }
+       ]
+      },
+      {
+       "id": 31,
+       "order": 6,
+       "startDate": "2027-04-18",
+       "endDate": "2027-04-24",
+       "completedTasks": 0,
+       "isHoliday": false,
+       "holidayName": "",
+       "tasks": [
+        {
+         "id": 1197,
+         "name": "الدرس [19] التجويد",
+         "type": "Video",
+         "dayOfWeek": 2,
+         "isCompleted": false,
+         "requireManualCompletion": true,
+         "isExerciseMandatory": false,
+         "taskDate": "2027-04-20T00:00:00.000Z",
+         "isDisabled": true,
+         "subject": {
+          "id": 8,
+          "title": "التجويد"
+         }
+        }
+       ]
+      },
+      {
+       "id": 32,
+       "order": 7,
+       "startDate": "2027-04-25",
+       "endDate": "2027-05-01",
+       "completedTasks": 0,
+       "isHoliday": false,
+       "holidayName": "",
+       "tasks": [
+        {
+         "id": 1218,
+         "name": "الدرس [20] التجويد",
+         "type": "Video",
+         "dayOfWeek": 2,
+         "isCompleted": false,
+         "requireManualCompletion": true,
+         "isExerciseMandatory": false,
+         "taskDate": "2027-04-27T00:00:00.000Z",
+         "isDisabled": true,
+         "subject": {
+          "id": 8,
+          "title": "التجويد"
+         }
+        },
+        {
+         "id": 923,
+         "name": "الدرس [16] الفقه",
+         "type": "Video",
+         "dayOfWeek": 6,
+         "isCompleted": false,
+         "requireManualCompletion": true,
+         "isExerciseMandatory": false,
+         "taskDate": "2027-05-01T00:00:00.000Z",
+         "isDisabled": true,
+         "subject": {
+          "id": 11,
+          "title": "الفقه"
+         }
+        },
+        {
+         "id": 81,
+         "name": "الدرس [16] التوحيد و العقيدة",
+         "type": "Video",
+         "dayOfWeek": 3,
+         "isCompleted": false,
+         "requireManualCompletion": true,
+         "isExerciseMandatory": false,
+         "taskDate": "2027-04-28T00:00:00.000Z",
+         "isDisabled": true,
+         "subject": {
+          "id": 9,
+          "title": "التوحيد و العقيدة"
+         }
+        },
+        {
+         "id": 110,
+         "name": "الدرس [16] النحو",
+         "type": "Video",
+         "dayOfWeek": 4,
+         "isCompleted": false,
+         "requireManualCompletion": true,
+         "isExerciseMandatory": false,
+         "taskDate": "2027-04-29T00:00:00.000Z",
+         "isDisabled": true,
+         "subject": {
+          "id": 10,
+          "title": "النحو"
+         }
+        },
+        {
+         "id": 890,
+         "name": "الدرس [16] السيرة النبوية",
+         "type": "Video",
+         "dayOfWeek": 1,
+         "isCompleted": false,
+         "requireManualCompletion": true,
+         "isExerciseMandatory": false,
+         "taskDate": "2027-04-26T00:00:00.000Z",
+         "isDisabled": true,
+         "subject": {
+          "id": 7,
+          "title": "السيرة النبوية"
+         }
+        }
+       ]
+      },
+      {
+       "id": 33,
+       "order": 8,
+       "startDate": "2027-05-02",
+       "endDate": "2027-05-08",
+       "completedTasks": 0,
+       "isHoliday": false,
+       "holidayName": "",
+       "tasks": [
+        {
+         "id": 1219,
+         "name": "الدرس [21] التجويد",
+         "type": "Video",
+         "dayOfWeek": 2,
+         "isCompleted": false,
+         "requireManualCompletion": true,
+         "isExerciseMandatory": false,
+         "taskDate": "2027-05-04T00:00:00.000Z",
+         "isDisabled": true,
+         "subject": {
+          "id": 8,
+          "title": "التجويد"
+         }
+        },
+        {
+         "id": 924,
+         "name": "الدرس [17] الفقه",
+         "type": "Video",
+         "dayOfWeek": 6,
+         "isCompleted": false,
+         "requireManualCompletion": true,
+         "isExerciseMandatory": false,
+         "taskDate": "2027-05-08T00:00:00.000Z",
+         "isDisabled": true,
+         "subject": {
+          "id": 11,
+          "title": "الفقه"
+         }
+        },
+        {
+         "id": 82,
+         "name": "الدرس [17] التوحيد و العقيدة",
+         "type": "Video",
+         "dayOfWeek": 3,
+         "isCompleted": false,
+         "requireManualCompletion": true,
+         "isExerciseMandatory": false,
+         "taskDate": "2027-05-05T00:00:00.000Z",
+         "isDisabled": true,
+         "subject": {
+          "id": 9,
+          "title": "التوحيد و العقيدة"
+         }
+        },
+        {
+         "id": 111,
+         "name": "الدرس [17] النحو",
+         "type": "Video",
+         "dayOfWeek": 4,
+         "isCompleted": false,
+         "requireManualCompletion": true,
+         "isExerciseMandatory": false,
+         "taskDate": "2027-05-06T00:00:00.000Z",
+         "isDisabled": true,
+         "subject": {
+          "id": 10,
+          "title": "النحو"
+         }
+        },
+        {
+         "id": 24,
+         "name": "الدرس [17] السيرة النبوية",
+         "type": "Video",
+         "dayOfWeek": 1,
+         "isCompleted": false,
+         "requireManualCompletion": true,
+         "isExerciseMandatory": false,
+         "taskDate": "2027-05-03T00:00:00.000Z",
+         "isDisabled": true,
+         "subject": {
+          "id": 7,
+          "title": "السيرة النبوية"
+         }
+        }
+       ]
+      },
+      {
+       "id": 34,
+       "order": 9,
+       "startDate": "2027-05-09",
+       "endDate": "2027-05-15",
+       "completedTasks": 0,
+       "isHoliday": false,
+       "holidayName": "",
+       "tasks": [
+        {
+         "id": 1220,
+         "name": "الدرس [22] التجويد",
+         "type": "Video",
+         "dayOfWeek": 2,
+         "isCompleted": false,
+         "requireManualCompletion": true,
+         "isExerciseMandatory": false,
+         "taskDate": "2027-05-11T00:00:00.000Z",
+         "isDisabled": true,
+         "subject": {
+          "id": 8,
+          "title": "التجويد"
+         }
+        },
+        {
+         "id": 141,
+         "name": "الدرس [18] الفقه",
+         "type": "Video",
+         "dayOfWeek": 6,
+         "isCompleted": false,
+         "requireManualCompletion": true,
+         "isExerciseMandatory": false,
+         "taskDate": "2027-05-15T00:00:00.000Z",
+         "isDisabled": true,
+         "subject": {
+          "id": 11,
+          "title": "الفقه"
+         }
+        },
+        {
+         "id": 112,
+         "name": "الدرس [18] النحو",
+         "type": "Video",
+         "dayOfWeek": 4,
+         "isCompleted": false,
+         "requireManualCompletion": true,
+         "isExerciseMandatory": false,
+         "taskDate": "2027-05-13T00:00:00.000Z",
+         "isDisabled": true,
+         "subject": {
+          "id": 10,
+          "title": "النحو"
+         }
+        },
+        {
+         "id": 83,
+         "name": "الدرس [18] التوحيد و العقيدة",
+         "type": "Video",
+         "dayOfWeek": 3,
+         "isCompleted": false,
+         "requireManualCompletion": true,
+         "isExerciseMandatory": false,
+         "taskDate": "2027-05-12T00:00:00.000Z",
+         "isDisabled": true,
+         "subject": {
+          "id": 9,
+          "title": "التوحيد و العقيدة"
+         }
+        },
+        {
+         "id": 25,
+         "name": "الدرس [18] السيرة النبوية",
+         "type": "Video",
+         "dayOfWeek": 1,
+         "isCompleted": false,
+         "requireManualCompletion": true,
+         "isExerciseMandatory": false,
+         "taskDate": "2027-05-10T00:00:00.000Z",
+         "isDisabled": true,
+         "subject": {
+          "id": 7,
+          "title": "السيرة النبوية"
+         }
+        }
+       ]
+      },
+      {
+       "id": 35,
+       "order": 10,
+       "startDate": "2027-05-16",
+       "endDate": "2027-05-22",
+       "completedTasks": 0,
+       "isHoliday": false,
+       "holidayName": "",
+       "tasks": [
+        {
+         "id": 1221,
+         "name": "الدرس [23] التجويد",
+         "type": "Video",
+         "dayOfWeek": 2,
+         "isCompleted": false,
+         "requireManualCompletion": true,
+         "isExerciseMandatory": false,
+         "taskDate": "2027-05-18T00:00:00.000Z",
+         "isDisabled": true,
+         "subject": {
+          "id": 8,
+          "title": "التجويد"
+         }
+        },
+        {
+         "id": 84,
+         "name": "الدرس [19] التوحيد و العقيدة",
+         "type": "Video",
+         "dayOfWeek": 3,
+         "isCompleted": false,
+         "requireManualCompletion": true,
+         "isExerciseMandatory": false,
+         "taskDate": "2027-05-19T00:00:00.000Z",
+         "isDisabled": true,
+         "subject": {
+          "id": 9,
+          "title": "التوحيد و العقيدة"
+         }
+        },
+        {
+         "id": 113,
+         "name": "الدرس [19] النحو",
+         "type": "Video",
+         "dayOfWeek": 4,
+         "isCompleted": false,
+         "requireManualCompletion": true,
+         "isExerciseMandatory": false,
+         "taskDate": "2027-05-20T00:00:00.000Z",
+         "isDisabled": true,
+         "subject": {
+          "id": 10,
+          "title": "النحو"
+         }
+        },
+        {
+         "id": 142,
+         "name": "الدرس [19] الفقه",
+         "type": "Video",
+         "dayOfWeek": 6,
+         "isCompleted": false,
+         "requireManualCompletion": true,
+         "isExerciseMandatory": false,
+         "taskDate": "2027-05-22T00:00:00.000Z",
+         "isDisabled": true,
+         "subject": {
+          "id": 11,
+          "title": "الفقه"
+         }
+        },
+        {
+         "id": 26,
+         "name": "الدرس [19] السيرة النبوية",
+         "type": "Video",
+         "dayOfWeek": 1,
+         "isCompleted": false,
+         "requireManualCompletion": true,
+         "isExerciseMandatory": false,
+         "taskDate": "2027-05-17T00:00:00.000Z",
+         "isDisabled": true,
+         "subject": {
+          "id": 7,
+          "title": "السيرة النبوية"
+         }
+        }
+       ]
+      },
+      {
+       "id": 36,
+       "order": 11,
+       "startDate": "2027-05-23",
+       "endDate": "2027-05-29",
+       "completedTasks": 0,
+       "isHoliday": false,
+       "holidayName": "",
+       "tasks": [
+        {
+         "id": 85,
+         "name": "الدرس [20] التوحيد و العقيدة",
+         "type": "Video",
+         "dayOfWeek": 3,
+         "isCompleted": false,
+         "requireManualCompletion": true,
+         "isExerciseMandatory": false,
+         "taskDate": "2027-05-26T00:00:00.000Z",
+         "isDisabled": true,
+         "subject": {
+          "id": 9,
+          "title": "التوحيد و العقيدة"
+         }
+        },
+        {
+         "id": 114,
+         "name": "الدرس [20] النحو",
+         "type": "Video",
+         "dayOfWeek": 4,
+         "isCompleted": false,
+         "requireManualCompletion": true,
+         "isExerciseMandatory": false,
+         "taskDate": "2027-05-27T00:00:00.000Z",
+         "isDisabled": true,
+         "subject": {
+          "id": 10,
+          "title": "النحو"
+         }
+        },
+        {
+         "id": 143,
+         "name": "الدرس [20] الفقه",
+         "type": "Video",
+         "dayOfWeek": 6,
+         "isCompleted": false,
+         "requireManualCompletion": true,
+         "isExerciseMandatory": false,
+         "taskDate": "2027-05-29T00:00:00.000Z",
+         "isDisabled": true,
+         "subject": {
+          "id": 11,
+          "title": "الفقه"
+         }
+        },
+        {
+         "id": 27,
+         "name": "الدرس [20] السيرة النبوية",
+         "type": "Video",
+         "dayOfWeek": 1,
+         "isCompleted": false,
+         "requireManualCompletion": true,
+         "isExerciseMandatory": false,
+         "taskDate": "2027-05-24T00:00:00.000Z",
+         "isDisabled": true,
+         "subject": {
+          "id": 7,
+          "title": "السيرة النبوية"
+         }
+        }
+       ]
+      },
+      {
+       "id": 37,
+       "order": 12,
+       "startDate": "2027-05-30",
+       "endDate": "2027-06-05",
+       "completedTasks": 0,
+       "isHoliday": false,
+       "holidayName": "",
+       "tasks": [
+        {
+         "id": 87,
+         "name": "الدرس [21] التوحيد و العقيدة",
+         "type": "Video",
+         "dayOfWeek": 3,
+         "isCompleted": false,
+         "requireManualCompletion": true,
+         "isExerciseMandatory": false,
+         "taskDate": "2027-06-02T00:00:00.000Z",
+         "isDisabled": true,
+         "subject": {
+          "id": 9,
+          "title": "التوحيد و العقيدة"
+         }
+        },
+        {
+         "id": 145,
+         "name": "الدرس [21] الفقه",
+         "type": "Video",
+         "dayOfWeek": 6,
+         "isCompleted": false,
+         "requireManualCompletion": true,
+         "isExerciseMandatory": false,
+         "taskDate": "2027-06-05T00:00:00.000Z",
+         "isDisabled": true,
+         "subject": {
+          "id": 11,
+          "title": "الفقه"
+         }
+        },
+        {
+         "id": 116,
+         "name": "الدرس [21] النحو",
+         "type": "Video",
+         "dayOfWeek": 4,
+         "isCompleted": false,
+         "requireManualCompletion": true,
+         "isExerciseMandatory": false,
+         "taskDate": "2027-06-03T00:00:00.000Z",
+         "isDisabled": true,
+         "subject": {
+          "id": 10,
+          "title": "النحو"
+         }
+        },
+        {
+         "id": 630,
+         "name": "الدرس [21] السيرة النبوية",
+         "type": "Video",
+         "dayOfWeek": 1,
+         "isCompleted": false,
+         "requireManualCompletion": true,
+         "isExerciseMandatory": false,
+         "taskDate": "2027-05-31T00:00:00.000Z",
+         "isDisabled": true,
+         "subject": {
+          "id": 7,
+          "title": "السيرة النبوية"
+         }
+        }
+       ]
+      },
+      {
+       "id": 38,
+       "order": 13,
+       "startDate": "2027-06-06",
+       "endDate": "2027-06-12",
+       "completedTasks": 0,
+       "isHoliday": false,
+       "holidayName": "",
+       "tasks": [
+        {
+         "id": 631,
+         "name": "الدرس [22] التوحيد والعقيدة",
+         "type": "Video",
+         "dayOfWeek": 3,
+         "isCompleted": false,
+         "requireManualCompletion": true,
+         "isExerciseMandatory": false,
+         "taskDate": "2027-06-09T00:00:00.000Z",
+         "isDisabled": true,
+         "subject": {
+          "id": 9,
+          "title": "التوحيد و العقيدة"
+         }
+        },
+        {
+         "id": 146,
+         "name": "الدرس [22] الفقه",
+         "type": "Video",
+         "dayOfWeek": 6,
+         "isCompleted": false,
+         "requireManualCompletion": true,
+         "isExerciseMandatory": false,
+         "taskDate": "2027-06-12T00:00:00.000Z",
+         "isDisabled": true,
+         "subject": {
+          "id": 11,
+          "title": "الفقه"
+         }
+        },
+        {
+         "id": 30,
+         "name": "الدرس [22] السيرة النبوية",
+         "type": "Video",
+         "dayOfWeek": 1,
+         "isCompleted": false,
+         "requireManualCompletion": true,
+         "isExerciseMandatory": false,
+         "taskDate": "2027-06-07T00:00:00.000Z",
+         "isDisabled": true,
+         "subject": {
+          "id": 7,
+          "title": "السيرة النبوية"
+         }
+        }
+       ]
+      },
+      {
+       "id": 39,
+       "order": 14,
+       "startDate": "2027-06-13",
+       "endDate": "2027-06-19",
+       "completedTasks": 0,
+       "isHoliday": false,
+       "holidayName": "",
+       "tasks": [
+        {
+         "id": 147,
+         "name": "الدرس [24] الفقه",
+         "type": "Video",
+         "dayOfWeek": 6,
+         "isCompleted": false,
+         "requireManualCompletion": true,
+         "isExerciseMandatory": false,
+         "taskDate": "2027-06-19T00:00:00.000Z",
+         "isDisabled": true,
+         "subject": {
+          "id": 11,
+          "title": "الفقه"
+         }
+        },
+        {
+         "id": 1140,
+         "name": "الدرس [23] الفقه",
+         "type": "Video",
+         "dayOfWeek": 1,
+         "isCompleted": false,
+         "requireManualCompletion": true,
+         "isExerciseMandatory": false,
+         "taskDate": "2027-06-14T00:00:00.000Z",
+         "isDisabled": true,
+         "subject": {
+          "id": 11,
+          "title": "الفقه"
+         }
+        },
+        {
+         "id": 639,
+         "name": "الدرس [23] التوحيد والعقيدة",
+         "type": "Video",
+         "dayOfWeek": 3,
+         "isCompleted": false,
+         "requireManualCompletion": true,
+         "isExerciseMandatory": false,
+         "taskDate": "2027-06-16T00:00:00.000Z",
+         "isDisabled": true,
+         "subject": {
+          "id": 9,
+          "title": "التوحيد و العقيدة"
+         }
+        }
+       ]
+      },
+      {
+       "id": 40,
+       "order": 15,
+       "startDate": "2027-06-20",
+       "endDate": "2027-06-26",
+       "completedTasks": 0,
+       "isHoliday": false,
+       "holidayName": "",
+       "tasks": [
+        {
+         "id": 1139,
+         "name": "الدرس [25] الفقه",
+         "type": "Video",
+         "dayOfWeek": 1,
+         "isCompleted": false,
+         "requireManualCompletion": true,
+         "isExerciseMandatory": false,
+         "taskDate": "2027-06-21T00:00:00.000Z",
+         "isDisabled": true,
+         "subject": {
+          "id": 11,
+          "title": "الفقه"
+         }
+        },
+        {
+         "id": 641,
+         "name": "الدرس [24] التوحيد والعقيدة",
+         "type": "Video",
+         "dayOfWeek": 3,
+         "isCompleted": false,
+         "requireManualCompletion": true,
+         "isExerciseMandatory": false,
+         "taskDate": "2027-06-23T00:00:00.000Z",
+         "isDisabled": true,
+         "subject": {
+          "id": 9,
+          "title": "التوحيد و العقيدة"
+         }
+        },
+        {
+         "id": 938,
+         "name": "الدرس [25] الفقه",
+         "type": "Video",
+         "dayOfWeek": 6,
+         "isCompleted": false,
+         "requireManualCompletion": true,
+         "isExerciseMandatory": false,
+         "taskDate": "2027-06-26T00:00:00.000Z",
+         "isDisabled": true,
+         "subject": {
+          "id": 11,
+          "title": "الفقه"
+         }
+        }
+       ]
+      },
+      {
+       "id": 41,
+       "order": 16,
+       "startDate": "2027-06-27",
+       "endDate": "2027-07-03",
+       "completedTasks": 0,
+       "isHoliday": false,
+       "holidayName": "",
+       "tasks": []
+      },
+      {
+       "id": 42,
+       "order": 17,
+       "startDate": null,
+       "endDate": null,
+       "completedTasks": 0,
+       "isHoliday": false,
+       "holidayName": "",
+       "tasks": []
+      },
+      {
+       "id": 43,
+       "order": 18,
+       "startDate": null,
+       "endDate": null,
+       "completedTasks": 0,
+       "isHoliday": false,
+       "holidayName": "",
+       "tasks": []
+      },
+      {
+       "id": 44,
+       "order": 19,
+       "startDate": null,
+       "endDate": null,
+       "completedTasks": 0,
+       "isHoliday": false,
+       "holidayName": "",
+       "tasks": []
+      },
+      {
+       "id": 45,
+       "order": 20,
+       "startDate": null,
+       "endDate": null,
+       "completedTasks": 0,
+       "isHoliday": false,
+       "holidayName": "",
+       "tasks": []
+      },
+      {
+       "id": 46,
+       "order": 21,
+       "startDate": null,
+       "endDate": null,
+       "completedTasks": 0,
+       "isHoliday": false,
+       "holidayName": "",
+       "tasks": []
+      },
+      {
+       "id": 47,
+       "order": 22,
+       "startDate": null,
+       "endDate": null,
+       "completedTasks": 0,
+       "isHoliday": false,
+       "holidayName": "",
+       "tasks": []
+      },
+      {
+       "id": 48,
+       "order": 23,
+       "startDate": null,
+       "endDate": null,
+       "completedTasks": 0,
+       "isHoliday": false,
+       "holidayName": "",
+       "tasks": []
+      },
+      {
+       "id": 49,
+       "order": 24,
+       "startDate": null,
+       "endDate": null,
+       "completedTasks": 0,
+       "isHoliday": false,
+       "holidayName": "",
+       "tasks": []
+      },
+      {
+       "id": 50,
+       "order": 25,
+       "startDate": null,
+       "endDate": null,
+       "completedTasks": 0,
+       "isHoliday": false,
+       "holidayName": "",
+       "tasks": []
+      }
+     ]
+    },
+    {
+     "id": 11,
+     "order": 1,
+     "startDate": "2026-10-05",
+     "completedPercentage": 0,
+     "taskCount": 65,
+     "completedTasks": 0,
+     "weeks": [
+      {
+       "id": 1,
+       "order": 1,
+       "startDate": "2026-10-05",
+       "endDate": "2026-10-11",
+       "completedTasks": 0,
+       "isHoliday": false,
+       "holidayName": "",
+       "tasks": []
+      },
+      {
+       "id": 2,
+       "order": 2,
+       "startDate": "2026-10-12",
+       "endDate": "2026-10-18",
+       "completedTasks": 0,
+       "isHoliday": false,
+       "holidayName": "",
+       "tasks": [
+        {
+         "id": 833,
+         "name": "الدرس [1] الفقه",
+         "type": "Video",
+         "dayOfWeek": 6,
+         "isCompleted": false,
+         "requireManualCompletion": true,
+         "isExerciseMandatory": false,
+         "taskDate": "2026-10-17T00:00:00.000Z",
+         "isDisabled": true,
+         "subject": {
+          "id": 11,
+          "title": "الفقه"
+         }
+        },
+        {
+         "id": 94,
+         "name": "الدرس [1] النحو",
+         "type": "Video",
+         "dayOfWeek": 4,
+         "isCompleted": false,
+         "requireManualCompletion": true,
+         "isExerciseMandatory": false,
+         "taskDate": "2026-10-15T00:00:00.000Z",
+         "isDisabled": true,
+         "subject": {
+          "id": 10,
+          "title": "النحو"
+         }
+        },
+        {
+         "id": 65,
+         "name": "الدرس [1] التوحيد و العقيدة",
+         "type": "Video",
+         "dayOfWeek": 3,
+         "isCompleted": false,
+         "requireManualCompletion": true,
+         "isExerciseMandatory": false,
+         "taskDate": "2026-10-14T00:00:00.000Z",
+         "isDisabled": true,
+         "subject": {
+          "id": 9,
+          "title": "التوحيد و العقيدة"
+         }
+        },
+        {
+         "id": 1183,
+         "name": "الدرس [1] التجويد",
+         "type": "Video",
+         "dayOfWeek": 2,
+         "isCompleted": false,
+         "requireManualCompletion": true,
+         "isExerciseMandatory": false,
+         "taskDate": "2026-10-13T00:00:00.000Z",
+         "isDisabled": true,
+         "subject": {
+          "id": 8,
+          "title": "التجويد"
+         }
+        },
+        {
+         "id": 7,
+         "name": "الدرس [1] السيرة النبوية",
+         "type": "Video",
+         "dayOfWeek": 1,
+         "isCompleted": false,
+         "requireManualCompletion": true,
+         "isExerciseMandatory": false,
+         "taskDate": "2026-10-12T00:00:00.000Z",
+         "isDisabled": true,
+         "subject": {
+          "id": 7,
+          "title": "السيرة النبوية"
+         }
+        }
+       ]
+      },
+      {
+       "id": 3,
+       "order": 3,
+       "startDate": "2026-10-19",
+       "endDate": "2026-10-25",
+       "completedTasks": 0,
+       "isHoliday": false,
+       "holidayName": "",
+       "tasks": [
+        {
+         "id": 1184,
+         "name": "الدرس [2] التجويد",
+         "type": "Video",
+         "dayOfWeek": 2,
+         "isCompleted": false,
+         "requireManualCompletion": true,
+         "isExerciseMandatory": false,
+         "taskDate": "2026-10-20T00:00:00.000Z",
+         "isDisabled": true,
+         "subject": {
+          "id": 8,
+          "title": "التجويد"
+         }
+        },
+        {
+         "id": 8,
+         "name": "الدرس [2] السيرة النبوية",
+         "type": "Video",
+         "dayOfWeek": 1,
+         "isCompleted": false,
+         "requireManualCompletion": true,
+         "isExerciseMandatory": false,
+         "taskDate": "2026-10-19T00:00:00.000Z",
+         "isDisabled": true,
+         "subject": {
+          "id": 7,
+          "title": "السيرة النبوية"
+         }
+        },
+        {
+         "id": 66,
+         "name": "الدرس [2] التوحيد و العقيدة",
+         "type": "Video",
+         "dayOfWeek": 3,
+         "isCompleted": false,
+         "requireManualCompletion": true,
+         "isExerciseMandatory": false,
+         "taskDate": "2026-10-21T00:00:00.000Z",
+         "isDisabled": true,
+         "subject": {
+          "id": 9,
+          "title": "التوحيد و العقيدة"
+         }
+        },
+        {
+         "id": 95,
+         "name": "الدرس [2] النحو",
+         "type": "Video",
+         "dayOfWeek": 4,
+         "isCompleted": false,
+         "requireManualCompletion": true,
+         "isExerciseMandatory": false,
+         "taskDate": "2026-10-22T00:00:00.000Z",
+         "isDisabled": true,
+         "subject": {
+          "id": 10,
+          "title": "النحو"
+         }
+        },
+        {
+         "id": 124,
+         "name": "الدرس [2] الفقه",
+         "type": "Video",
+         "dayOfWeek": 6,
+         "isCompleted": false,
+         "requireManualCompletion": true,
+         "isExerciseMandatory": false,
+         "taskDate": "2026-10-24T00:00:00.000Z",
+         "isDisabled": true,
+         "subject": {
+          "id": 11,
+          "title": "الفقه"
+         }
+        }
+       ]
+      },
+      {
+       "id": 4,
+       "order": 4,
+       "startDate": "2026-10-26",
+       "endDate": "2026-11-01",
+       "completedTasks": 0,
+       "isHoliday": false,
+       "holidayName": "",
+       "tasks": [
+        {
+         "id": 1185,
+         "name": "الدرس [3] التجويد",
+         "type": "Video",
+         "dayOfWeek": 2,
+         "isCompleted": false,
+         "requireManualCompletion": true,
+         "isExerciseMandatory": false,
+         "taskDate": "2026-10-27T00:00:00.000Z",
+         "isDisabled": true,
+         "subject": {
+          "id": 8,
+          "title": "التجويد"
+         }
+        },
+        {
+         "id": 96,
+         "name": "الدرس [3] النحو",
+         "type": "Video",
+         "dayOfWeek": 4,
+         "isCompleted": false,
+         "requireManualCompletion": true,
+         "isExerciseMandatory": false,
+         "taskDate": "2026-10-29T00:00:00.000Z",
+         "isDisabled": true,
+         "subject": {
+          "id": 10,
+          "title": "النحو"
+         }
+        },
+        {
+         "id": 67,
+         "name": "الدرس [3] التوحيد و العقيدة",
+         "type": "Video",
+         "dayOfWeek": 3,
+         "isCompleted": false,
+         "requireManualCompletion": true,
+         "isExerciseMandatory": false,
+         "taskDate": "2026-10-28T00:00:00.000Z",
+         "isDisabled": true,
+         "subject": {
+          "id": 9,
+          "title": "التوحيد و العقيدة"
+         }
+        },
+        {
+         "id": 125,
+         "name": "الدرس [3] الفقه",
+         "type": "Video",
+         "dayOfWeek": 6,
+         "isCompleted": false,
+         "requireManualCompletion": true,
+         "isExerciseMandatory": false,
+         "taskDate": "2026-10-31T00:00:00.000Z",
+         "isDisabled": true,
+         "subject": {
+          "id": 11,
+          "title": "الفقه"
+         }
+        },
+        {
+         "id": 9,
+         "name": "الدرس [3] السيرة النبوية",
+         "type": "Video",
+         "dayOfWeek": 1,
+         "isCompleted": false,
+         "requireManualCompletion": true,
+         "isExerciseMandatory": false,
+         "taskDate": "2026-10-26T00:00:00.000Z",
+         "isDisabled": true,
+         "subject": {
+          "id": 7,
+          "title": "السيرة النبوية"
+         }
+        }
+       ]
+      },
+      {
+       "id": 5,
+       "order": 5,
+       "startDate": "2026-11-02",
+       "endDate": "2026-11-08",
+       "completedTasks": 0,
+       "isHoliday": false,
+       "holidayName": "",
+       "tasks": [
+        {
+         "id": 1186,
+         "name": "الدرس [4] التجويد",
+         "type": "Video",
+         "dayOfWeek": 2,
+         "isCompleted": false,
+         "requireManualCompletion": true,
+         "isExerciseMandatory": false,
+         "taskDate": "2026-11-03T00:00:00.000Z",
+         "isDisabled": true,
+         "subject": {
+          "id": 8,
+          "title": "التجويد"
+         }
+        },
+        {
+         "id": 97,
+         "name": "الدرس [4] النحو",
+         "type": "Video",
+         "dayOfWeek": 4,
+         "isCompleted": false,
+         "requireManualCompletion": true,
+         "isExerciseMandatory": false,
+         "taskDate": "2026-11-05T00:00:00.000Z",
+         "isDisabled": true,
+         "subject": {
+          "id": 10,
+          "title": "النحو"
+         }
+        },
+        {
+         "id": 68,
+         "name": "الدرس [4] التوحيد و العقيدة",
+         "type": "Video",
+         "dayOfWeek": 3,
+         "isCompleted": false,
+         "requireManualCompletion": true,
+         "isExerciseMandatory": false,
+         "taskDate": "2026-11-04T00:00:00.000Z",
+         "isDisabled": true,
+         "subject": {
+          "id": 9,
+          "title": "التوحيد و العقيدة"
+         }
+        },
+        {
+         "id": 126,
+         "name": "الدرس [4] الفقه",
+         "type": "Video",
+         "dayOfWeek": 6,
+         "isCompleted": false,
+         "requireManualCompletion": true,
+         "isExerciseMandatory": false,
+         "taskDate": "2026-11-07T00:00:00.000Z",
+         "isDisabled": true,
+         "subject": {
+          "id": 11,
+          "title": "الفقه"
+         }
+        },
+        {
+         "id": 10,
+         "name": "الدرس [4] السيرة النبوية",
+         "type": "Video",
+         "dayOfWeek": 1,
+         "isCompleted": false,
+         "requireManualCompletion": true,
+         "isExerciseMandatory": false,
+         "taskDate": "2026-11-02T00:00:00.000Z",
+         "isDisabled": true,
+         "subject": {
+          "id": 7,
+          "title": "السيرة النبوية"
+         }
+        }
+       ]
+      },
+      {
+       "id": 6,
+       "order": 6,
+       "startDate": "2026-11-09",
+       "endDate": "2026-11-15",
+       "completedTasks": 0,
+       "isHoliday": false,
+       "holidayName": "",
+       "tasks": [
+        {
+         "id": 1187,
+         "name": "الدرس [5] التجويد",
+         "type": "Video",
+         "dayOfWeek": 2,
+         "isCompleted": false,
+         "requireManualCompletion": true,
+         "isExerciseMandatory": false,
+         "taskDate": "2026-11-10T00:00:00.000Z",
+         "isDisabled": true,
+         "subject": {
+          "id": 8,
+          "title": "التجويد"
+         }
+        },
+        {
+         "id": 98,
+         "name": "الدرس [5] النحو",
+         "type": "Video",
+         "dayOfWeek": 4,
+         "isCompleted": false,
+         "requireManualCompletion": true,
+         "isExerciseMandatory": false,
+         "taskDate": "2026-11-12T00:00:00.000Z",
+         "isDisabled": true,
+         "subject": {
+          "id": 10,
+          "title": "النحو"
+         }
+        },
+        {
+         "id": 127,
+         "name": "الدرس [5] الفقه",
+         "type": "Video",
+         "dayOfWeek": 6,
+         "isCompleted": false,
+         "requireManualCompletion": true,
+         "isExerciseMandatory": false,
+         "taskDate": "2026-11-14T00:00:00.000Z",
+         "isDisabled": true,
+         "subject": {
+          "id": 11,
+          "title": "الفقه"
+         }
+        },
+        {
+         "id": 69,
+         "name": "الدرس [5] التوحيد و العقيدة",
+         "type": "Video",
+         "dayOfWeek": 3,
+         "isCompleted": false,
+         "requireManualCompletion": true,
+         "isExerciseMandatory": false,
+         "taskDate": "2026-11-11T00:00:00.000Z",
+         "isDisabled": true,
+         "subject": {
+          "id": 9,
+          "title": "التوحيد و العقيدة"
+         }
+        },
+        {
+         "id": 11,
+         "name": "الدرس [5] السيرة النبوية",
+         "type": "Video",
+         "dayOfWeek": 1,
+         "isCompleted": false,
+         "requireManualCompletion": true,
+         "isExerciseMandatory": false,
+         "taskDate": "2026-11-09T00:00:00.000Z",
+         "isDisabled": true,
+         "subject": {
+          "id": 7,
+          "title": "السيرة النبوية"
+         }
+        }
+       ]
+      },
+      {
+       "id": 7,
+       "order": 7,
+       "startDate": "2026-11-16",
+       "endDate": "2026-11-22",
+       "completedTasks": 0,
+       "isHoliday": false,
+       "holidayName": "",
+       "tasks": [
+        {
+         "id": 1188,
+         "name": "الدرس [6] التجويد",
+         "type": "Video",
+         "dayOfWeek": 2,
+         "isCompleted": false,
+         "requireManualCompletion": true,
+         "isExerciseMandatory": false,
+         "taskDate": "2026-11-17T00:00:00.000Z",
+         "isDisabled": true,
+         "subject": {
+          "id": 8,
+          "title": "التجويد"
+         }
+        },
+        {
+         "id": 99,
+         "name": "الدرس [6] النحو",
+         "type": "Video",
+         "dayOfWeek": 4,
+         "isCompleted": false,
+         "requireManualCompletion": true,
+         "isExerciseMandatory": false,
+         "taskDate": "2026-11-19T00:00:00.000Z",
+         "isDisabled": true,
+         "subject": {
+          "id": 10,
+          "title": "النحو"
+         }
+        },
+        {
+         "id": 128,
+         "name": "الدرس [6] الفقه",
+         "type": "Video",
+         "dayOfWeek": 6,
+         "isCompleted": false,
+         "requireManualCompletion": true,
+         "isExerciseMandatory": false,
+         "taskDate": "2026-11-21T00:00:00.000Z",
+         "isDisabled": true,
+         "subject": {
+          "id": 11,
+          "title": "الفقه"
+         }
+        },
+        {
+         "id": 70,
+         "name": "الدرس [6] التوحيد و العقيدة",
+         "type": "Video",
+         "dayOfWeek": 3,
+         "isCompleted": false,
+         "requireManualCompletion": true,
+         "isExerciseMandatory": false,
+         "taskDate": "2026-11-18T00:00:00.000Z",
+         "isDisabled": true,
+         "subject": {
+          "id": 9,
+          "title": "التوحيد و العقيدة"
+         }
+        },
+        {
+         "id": 12,
+         "name": "الدرس [6] السيرة النبوية",
+         "type": "Video",
+         "dayOfWeek": 1,
+         "isCompleted": false,
+         "requireManualCompletion": true,
+         "isExerciseMandatory": false,
+         "taskDate": "2026-11-16T00:00:00.000Z",
+         "isDisabled": true,
+         "subject": {
+          "id": 7,
+          "title": "السيرة النبوية"
+         }
+        }
+       ]
+      },
+      {
+       "id": 8,
+       "order": 8,
+       "startDate": "2026-11-23",
+       "endDate": "2026-11-29",
+       "completedTasks": 0,
+       "isHoliday": false,
+       "holidayName": "",
+       "tasks": [
+        {
+         "id": 1189,
+         "name": "الدرس [7] التجويد",
+         "type": "Video",
+         "dayOfWeek": 2,
+         "isCompleted": false,
+         "requireManualCompletion": true,
+         "isExerciseMandatory": false,
+         "taskDate": "2026-11-24T00:00:00.000Z",
+         "isDisabled": true,
+         "subject": {
+          "id": 8,
+          "title": "التجويد"
+         }
+        },
+        {
+         "id": 71,
+         "name": "الدرس [7] التوحيد و العقيدة",
+         "type": "Video",
+         "dayOfWeek": 3,
+         "isCompleted": false,
+         "requireManualCompletion": true,
+         "isExerciseMandatory": false,
+         "taskDate": "2026-11-25T00:00:00.000Z",
+         "isDisabled": true,
+         "subject": {
+          "id": 9,
+          "title": "التوحيد و العقيدة"
+         }
+        },
+        {
+         "id": 100,
+         "name": "الدرس [7] النحو",
+         "type": "Video",
+         "dayOfWeek": 4,
+         "isCompleted": false,
+         "requireManualCompletion": true,
+         "isExerciseMandatory": false,
+         "taskDate": "2026-11-26T00:00:00.000Z",
+         "isDisabled": true,
+         "subject": {
+          "id": 10,
+          "title": "النحو"
+         }
+        },
+        {
+         "id": 129,
+         "name": "الدرس [7] الفقه",
+         "type": "Video",
+         "dayOfWeek": 6,
+         "isCompleted": false,
+         "requireManualCompletion": true,
+         "isExerciseMandatory": false,
+         "taskDate": "2026-11-28T00:00:00.000Z",
+         "isDisabled": true,
+         "subject": {
+          "id": 11,
+          "title": "الفقه"
+         }
+        },
+        {
+         "id": 13,
+         "name": "الدرس [7] السيرة النبوية",
+         "type": "Video",
+         "dayOfWeek": 1,
+         "isCompleted": false,
+         "requireManualCompletion": true,
+         "isExerciseMandatory": false,
+         "taskDate": "2026-11-23T00:00:00.000Z",
+         "isDisabled": true,
+         "subject": {
+          "id": 7,
+          "title": "السيرة النبوية"
+         }
+        }
+       ]
+      },
+      {
+       "id": 9,
+       "order": 9,
+       "startDate": "2026-11-30",
+       "endDate": "2026-12-06",
+       "completedTasks": 0,
+       "isHoliday": false,
+       "holidayName": "",
+       "tasks": [
+        {
+         "id": 1190,
+         "name": "الدرس [8] التجويد",
+         "type": "Video",
+         "dayOfWeek": 2,
+         "isCompleted": false,
+         "requireManualCompletion": true,
+         "isExerciseMandatory": false,
+         "taskDate": "2026-12-01T00:00:00.000Z",
+         "isDisabled": true,
+         "subject": {
+          "id": 8,
+          "title": "التجويد"
+         }
+        },
+        {
+         "id": 130,
+         "name": "الدرس [8] الفقه",
+         "type": "Video",
+         "dayOfWeek": 6,
+         "isCompleted": false,
+         "requireManualCompletion": true,
+         "isExerciseMandatory": false,
+         "taskDate": "2026-12-05T00:00:00.000Z",
+         "isDisabled": true,
+         "subject": {
+          "id": 11,
+          "title": "الفقه"
+         }
+        },
+        {
+         "id": 72,
+         "name": "الدرس [8] التوحيد و العقيدة",
+         "type": "Video",
+         "dayOfWeek": 3,
+         "isCompleted": false,
+         "requireManualCompletion": true,
+         "isExerciseMandatory": false,
+         "taskDate": "2026-12-02T00:00:00.000Z",
+         "isDisabled": true,
+         "subject": {
+          "id": 9,
+          "title": "التوحيد و العقيدة"
+         }
+        },
+        {
+         "id": 101,
+         "name": "الدرس [8] النحو",
+         "type": "Video",
+         "dayOfWeek": 4,
+         "isCompleted": false,
+         "requireManualCompletion": true,
+         "isExerciseMandatory": false,
+         "taskDate": "2026-12-03T00:00:00.000Z",
+         "isDisabled": true,
+         "subject": {
+          "id": 10,
+          "title": "النحو"
+         }
+        },
+        {
+         "id": 14,
+         "name": "الدرس [8] السيرة النبوية",
+         "type": "Video",
+         "dayOfWeek": 1,
+         "isCompleted": false,
+         "requireManualCompletion": true,
+         "isExerciseMandatory": false,
+         "taskDate": "2026-11-30T00:00:00.000Z",
+         "isDisabled": true,
+         "subject": {
+          "id": 7,
+          "title": "السيرة النبوية"
+         }
+        }
+       ]
+      },
+      {
+       "id": 10,
+       "order": 10,
+       "startDate": "2026-12-07",
+       "endDate": "2026-12-13",
+       "completedTasks": 0,
+       "isHoliday": false,
+       "holidayName": "",
+       "tasks": [
+        {
+         "id": 102,
+         "name": "الدرس [9] النحو",
+         "type": "Video",
+         "dayOfWeek": 4,
+         "isCompleted": false,
+         "requireManualCompletion": true,
+         "isExerciseMandatory": false,
+         "taskDate": "2026-12-10T00:00:00.000Z",
+         "isDisabled": true,
+         "subject": {
+          "id": 10,
+          "title": "النحو"
+         }
+        },
+        {
+         "id": 1191,
+         "name": "الدرس [9] التجويد",
+         "type": "Video",
+         "dayOfWeek": 2,
+         "isCompleted": false,
+         "requireManualCompletion": true,
+         "isExerciseMandatory": false,
+         "taskDate": "2026-12-08T00:00:00.000Z",
+         "isDisabled": true,
+         "subject": {
+          "id": 8,
+          "title": "التجويد"
+         }
+        },
+        {
+         "id": 131,
+         "name": "الدرس [9] الفقه",
+         "type": "Video",
+         "dayOfWeek": 6,
+         "isCompleted": false,
+         "requireManualCompletion": true,
+         "isExerciseMandatory": false,
+         "taskDate": "2026-12-12T00:00:00.000Z",
+         "isDisabled": true,
+         "subject": {
+          "id": 11,
+          "title": "الفقه"
+         }
+        },
+        {
+         "id": 73,
+         "name": "الدرس [9] التوحيد و العقيدة",
+         "type": "Video",
+         "dayOfWeek": 3,
+         "isCompleted": false,
+         "requireManualCompletion": true,
+         "isExerciseMandatory": false,
+         "taskDate": "2026-12-09T00:00:00.000Z",
+         "isDisabled": true,
+         "subject": {
+          "id": 9,
+          "title": "التوحيد و العقيدة"
+         }
+        },
+        {
+         "id": 15,
+         "name": "الدرس [9] السيرة النبوية",
+         "type": "Video",
+         "dayOfWeek": 1,
+         "isCompleted": false,
+         "requireManualCompletion": true,
+         "isExerciseMandatory": false,
+         "taskDate": "2026-12-07T00:00:00.000Z",
+         "isDisabled": true,
+         "subject": {
+          "id": 7,
+          "title": "السيرة النبوية"
+         }
+        }
+       ]
+      },
+      {
+       "id": 11,
+       "order": 11,
+       "startDate": "2026-12-14",
+       "endDate": "2026-12-20",
+       "completedTasks": 0,
+       "isHoliday": false,
+       "holidayName": "",
+       "tasks": [
+        {
+         "id": 17,
+         "name": "الدرس [10] السيرة النبوية",
+         "type": "Video",
+         "dayOfWeek": 1,
+         "isCompleted": false,
+         "requireManualCompletion": true,
+         "isExerciseMandatory": false,
+         "taskDate": "2026-12-14T00:00:00.000Z",
+         "isDisabled": true,
+         "subject": {
+          "id": 7,
+          "title": "السيرة النبوية"
+         }
+        },
+        {
+         "id": 1192,
+         "name": "الدرس [10] التجويد",
+         "type": "Video",
+         "dayOfWeek": 2,
+         "isCompleted": false,
+         "requireManualCompletion": true,
+         "isExerciseMandatory": false,
+         "taskDate": "2026-12-15T00:00:00.000Z",
+         "isDisabled": true,
+         "subject": {
+          "id": 8,
+          "title": "التجويد"
+         }
+        },
+        {
+         "id": 75,
+         "name": "الدرس [10] التوحيد و العقيدة",
+         "type": "Video",
+         "dayOfWeek": 3,
+         "isCompleted": false,
+         "requireManualCompletion": true,
+         "isExerciseMandatory": false,
+         "taskDate": "2026-12-16T00:00:00.000Z",
+         "isDisabled": true,
+         "subject": {
+          "id": 9,
+          "title": "التوحيد و العقيدة"
+         }
+        },
+        {
+         "id": 133,
+         "name": "الدرس [10] الفقه",
+         "type": "Video",
+         "dayOfWeek": 6,
+         "isCompleted": false,
+         "requireManualCompletion": true,
+         "isExerciseMandatory": false,
+         "taskDate": "2026-12-19T00:00:00.000Z",
+         "isDisabled": true,
+         "subject": {
+          "id": 11,
+          "title": "الفقه"
+         }
+        },
+        {
+         "id": 104,
+         "name": "الدرس [10] النحو",
+         "type": "Video",
+         "dayOfWeek": 4,
+         "isCompleted": false,
+         "requireManualCompletion": true,
+         "isExerciseMandatory": false,
+         "taskDate": "2026-12-17T00:00:00.000Z",
+         "isDisabled": true,
+         "subject": {
+          "id": 10,
+          "title": "النحو"
+         }
+        }
+       ]
+      },
+      {
+       "id": 12,
+       "order": 12,
+       "startDate": "2026-12-21",
+       "endDate": "2026-12-27",
+       "completedTasks": 0,
+       "isHoliday": false,
+       "holidayName": "",
+       "tasks": [
+        {
+         "id": 1193,
+         "name": "الدرس [11] التجويد",
+         "type": "Video",
+         "dayOfWeek": 2,
+         "isCompleted": false,
+         "requireManualCompletion": true,
+         "isExerciseMandatory": false,
+         "taskDate": "2026-12-22T00:00:00.000Z",
+         "isDisabled": true,
+         "subject": {
+          "id": 8,
+          "title": "التجويد"
+         }
+        },
+        {
+         "id": 105,
+         "name": "الدرس [11] النحو",
+         "type": "Video",
+         "dayOfWeek": 4,
+         "isCompleted": false,
+         "requireManualCompletion": true,
+         "isExerciseMandatory": false,
+         "taskDate": "2026-12-24T00:00:00.000Z",
+         "isDisabled": true,
+         "subject": {
+          "id": 10,
+          "title": "النحو"
+         }
+        },
+        {
+         "id": 134,
+         "name": "الدرس [11] الفقه",
+         "type": "Video",
+         "dayOfWeek": 6,
+         "isCompleted": false,
+         "requireManualCompletion": true,
+         "isExerciseMandatory": false,
+         "taskDate": "2026-12-26T00:00:00.000Z",
+         "isDisabled": true,
+         "subject": {
+          "id": 11,
+          "title": "الفقه"
+         }
+        },
+        {
+         "id": 76,
+         "name": "الدرس [11] التوحيد و العقيدة",
+         "type": "Video",
+         "dayOfWeek": 3,
+         "isCompleted": false,
+         "requireManualCompletion": true,
+         "isExerciseMandatory": false,
+         "taskDate": "2026-12-23T00:00:00.000Z",
+         "isDisabled": true,
+         "subject": {
+          "id": 9,
+          "title": "التوحيد و العقيدة"
+         }
+        },
+        {
+         "id": 18,
+         "name": "الدرس [11] السيرة النبوية",
+         "type": "Video",
+         "dayOfWeek": 1,
+         "isCompleted": false,
+         "requireManualCompletion": true,
+         "isExerciseMandatory": false,
+         "taskDate": "2026-12-21T00:00:00.000Z",
+         "isDisabled": true,
+         "subject": {
+          "id": 7,
+          "title": "السيرة النبوية"
+         }
+        }
+       ]
+      },
+      {
+       "id": 13,
+       "order": 13,
+       "startDate": "2026-12-28",
+       "endDate": "2027-01-03",
+       "completedTasks": 0,
+       "isHoliday": false,
+       "holidayName": "",
+       "tasks": [
+        {
+         "id": 1194,
+         "name": "الدرس [12] التجويد",
+         "type": "Video",
+         "dayOfWeek": 2,
+         "isCompleted": false,
+         "requireManualCompletion": true,
+         "isExerciseMandatory": false,
+         "taskDate": "2026-12-29T00:00:00.000Z",
+         "isDisabled": true,
+         "subject": {
+          "id": 8,
+          "title": "التجويد"
+         }
+        },
+        {
+         "id": 77,
+         "name": "الدرس [12] التوحيد و العقيدة",
+         "type": "Video",
+         "dayOfWeek": 3,
+         "isCompleted": false,
+         "requireManualCompletion": true,
+         "isExerciseMandatory": false,
+         "taskDate": "2026-12-30T00:00:00.000Z",
+         "isDisabled": true,
+         "subject": {
+          "id": 9,
+          "title": "التوحيد و العقيدة"
+         }
+        },
+        {
+         "id": 135,
+         "name": "الدرس [12] الفقه",
+         "type": "Video",
+         "dayOfWeek": 6,
+         "isCompleted": false,
+         "requireManualCompletion": true,
+         "isExerciseMandatory": false,
+         "taskDate": "2027-01-02T00:00:00.000Z",
+         "isDisabled": true,
+         "subject": {
+          "id": 11,
+          "title": "الفقه"
+         }
+        },
+        {
+         "id": 106,
+         "name": "الدرس [12] النحو",
+         "type": "Video",
+         "dayOfWeek": 4,
+         "isCompleted": false,
+         "requireManualCompletion": true,
+         "isExerciseMandatory": false,
+         "taskDate": "2026-12-31T00:00:00.000Z",
+         "isDisabled": true,
+         "subject": {
+          "id": 10,
+          "title": "النحو"
+         }
+        },
+        {
+         "id": 19,
+         "name": "الدرس [12] السيرة النبوية",
+         "type": "Video",
+         "dayOfWeek": 1,
+         "isCompleted": false,
+         "requireManualCompletion": true,
+         "isExerciseMandatory": false,
+         "taskDate": "2026-12-28T00:00:00.000Z",
+         "isDisabled": true,
+         "subject": {
+          "id": 7,
+          "title": "السيرة النبوية"
+         }
+        }
+       ]
+      },
+      {
+       "id": 14,
+       "order": 14,
+       "startDate": "2027-01-04",
+       "endDate": "2027-01-10",
+       "completedTasks": 0,
+       "isHoliday": false,
+       "holidayName": "",
+       "tasks": [
+        {
+         "id": 1195,
+         "name": "الدرس [13] التجويد",
+         "type": "Video",
+         "dayOfWeek": 2,
+         "isCompleted": false,
+         "requireManualCompletion": true,
+         "isExerciseMandatory": false,
+         "taskDate": "2027-01-05T00:00:00.000Z",
+         "isDisabled": true,
+         "subject": {
+          "id": 8,
+          "title": "التجويد"
+         }
+        },
+        {
+         "id": 78,
+         "name": "الدرس [13] التوحيد و العقيدة",
+         "type": "Video",
+         "dayOfWeek": 3,
+         "isCompleted": false,
+         "requireManualCompletion": true,
+         "isExerciseMandatory": false,
+         "taskDate": "2027-01-06T00:00:00.000Z",
+         "isDisabled": true,
+         "subject": {
+          "id": 9,
+          "title": "التوحيد و العقيدة"
+         }
+        },
+        {
+         "id": 136,
+         "name": "الدرس [13] الفقه",
+         "type": "Video",
+         "dayOfWeek": 6,
+         "isCompleted": false,
+         "requireManualCompletion": true,
+         "isExerciseMandatory": false,
+         "taskDate": "2027-01-09T00:00:00.000Z",
+         "isDisabled": true,
+         "subject": {
+          "id": 11,
+          "title": "الفقه"
+         }
+        },
+        {
+         "id": 107,
+         "name": "الدرس [13] النحو",
+         "type": "Video",
+         "dayOfWeek": 4,
+         "isCompleted": false,
+         "requireManualCompletion": true,
+         "isExerciseMandatory": false,
+         "taskDate": "2027-01-07T00:00:00.000Z",
+         "isDisabled": true,
+         "subject": {
+          "id": 10,
+          "title": "النحو"
+         }
+        },
+        {
+         "id": 20,
+         "name": "الدرس [13] السيرة النبوية",
+         "type": "Video",
+         "dayOfWeek": 1,
+         "isCompleted": false,
+         "requireManualCompletion": true,
+         "isExerciseMandatory": false,
+         "taskDate": "2027-01-04T00:00:00.000Z",
+         "isDisabled": true,
+         "subject": {
+          "id": 7,
+          "title": "السيرة النبوية"
+         }
+        }
+       ]
+      },
+      {
+       "id": 15,
+       "order": 15,
+       "startDate": null,
+       "endDate": null,
+       "completedTasks": 0,
+       "isHoliday": false,
+       "holidayName": "",
+       "tasks": []
+      },
+      {
+       "id": 16,
+       "order": 16,
+       "startDate": null,
+       "endDate": null,
+       "completedTasks": 0,
+       "isHoliday": false,
+       "holidayName": "",
+       "tasks": []
+      },
+      {
+       "id": 17,
+       "order": 17,
+       "startDate": null,
+       "endDate": null,
+       "completedTasks": 0,
+       "isHoliday": false,
+       "holidayName": "",
+       "tasks": []
+      },
+      {
+       "id": 18,
+       "order": 18,
+       "startDate": null,
+       "endDate": null,
+       "completedTasks": 0,
+       "isHoliday": false,
+       "holidayName": "",
+       "tasks": []
+      },
+      {
+       "id": 19,
+       "order": 19,
+       "startDate": null,
+       "endDate": null,
+       "completedTasks": 0,
+       "isHoliday": false,
+       "holidayName": "",
+       "tasks": []
+      },
+      {
+       "id": 20,
+       "order": 20,
+       "startDate": null,
+       "endDate": null,
+       "completedTasks": 0,
+       "isHoliday": false,
+       "holidayName": "",
+       "tasks": []
+      },
+      {
+       "id": 21,
+       "order": 21,
+       "startDate": null,
+       "endDate": null,
+       "completedTasks": 0,
+       "isHoliday": false,
+       "holidayName": "",
+       "tasks": []
+      },
+      {
+       "id": 22,
+       "order": 22,
+       "startDate": null,
+       "endDate": null,
+       "completedTasks": 0,
+       "isHoliday": false,
+       "holidayName": "",
+       "tasks": []
+      },
+      {
+       "id": 23,
+       "order": 23,
+       "startDate": null,
+       "endDate": null,
+       "completedTasks": 0,
+       "isHoliday": false,
+       "holidayName": "",
+       "tasks": []
+      },
+      {
+       "id": 24,
+       "order": 24,
+       "startDate": null,
+       "endDate": null,
+       "completedTasks": 0,
+       "isHoliday": false,
+       "holidayName": "",
+       "tasks": []
+      },
+      {
+       "id": 25,
+       "order": 25,
+       "startDate": null,
+       "endDate": null,
+       "completedTasks": 0,
+       "isHoliday": false,
+       "holidayName": "",
+       "tasks": []
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}
