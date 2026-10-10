@@ -53,8 +53,13 @@ RECONCILE_PROMPT = """أنت مدقق نصوص عربية تراثية. أمام
 
 
 def run_marker(pdf, pages, out_dir):
-    """Lance marker avec sortie paginée ; renvoie le chemin du .md produit."""
+    """Lance marker avec sortie paginée ; renvoie le chemin du .md produit.
+    Une sortie déjà présente (même PDF, pas de plage de pages) est réutilisée."""
     out_dir.mkdir(parents=True, exist_ok=True)
+    existing = out_dir / pdf.stem / f"{pdf.stem}.md"
+    if existing.exists() and not pages:
+        print(f"marker : sortie existante réutilisée ({existing})")
+        return existing
     cmd = [str(MARKER), str(pdf), "--output_dir", str(out_dir), "--output_format", "markdown",
            "--paginate_output", "--force_ocr"]
     if pages:
