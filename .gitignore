@@ -34,3 +34,6 @@ temp/
 
 # PDF des cours téléchargés par get_attachments.py (lourds, régénérables)
 attachments/pdf/
+
+# Jeton de la plateforme de cours (jamais commité)
+attachments/token.txt

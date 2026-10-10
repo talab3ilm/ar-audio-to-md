@@ -3,7 +3,9 @@
 #
 # 1. Liste : soit le fichier attachments/attachments.json déjà exporté (défaut), soit l'API
 #    de la plateforme avec un jeton (port du script get_attachements.js) :
-#       ./get_attachments.py --fetch --api https://<domaine>/api --token <ACCESS_TOKEN> [--level 1]
+#       ./get_attachments.py --fetch [--token <ACCESS_TOKEN>] [--level 1]
+#    (jeton : --token, ou variable ALBAJI_TOKEN, ou fichier attachments/token.txt ; API par défaut :
+#     https://baji.irchademy.irchad-backends.com/api)
 # 2. Téléchargement de chaque URL (S3 public, pas d'authentification) dans
 #       attachments/pdf/<niveau>/<matière>/<id> - <titre>.pdf
 #    Les fichiers déjà présents et complets ne sont pas retéléchargés. Un index
@@ -25,6 +27,8 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent
 ATT = ROOT / "attachments"
+API_DEFAULT = "https://baji.irchademy.irchad-backends.com/api"
+TOKEN_FILE = ATT / "token.txt"          # jeton Bearer de la plateforme, hors git (ou variable ALBAJI_TOKEN)
 JSON_FILE = ATT / "attachments.json"
 PDF_DIR = ATT / "pdf"
 INDEX = ATT / "index.tsv"
@@ -88,8 +92,8 @@ def download(url, target, retries=3):
 def main():
     ap = argparse.ArgumentParser(description="Télécharge les PDF des cours listés par la plateforme")
     ap.add_argument("--fetch", action="store_true", help="récupérer la liste depuis l'API (sinon attachments.json)")
-    ap.add_argument("--api", help="base de l'API, ex. https://plateforme.exemple/api")
-    ap.add_argument("--token", help="jeton Bearer de la plateforme")
+    ap.add_argument("--api", default=API_DEFAULT, help=f"base de l'API (défaut : {API_DEFAULT})")
+    ap.add_argument("--token", help="jeton Bearer (sinon variable ALBAJI_TOKEN, sinon attachments/token.txt)")
     ap.add_argument("--level", type=int, default=1)
     ap.add_argument("--enabled-only", action="store_true")
     ap.add_argument("--subject", help="limiter à cette matière (titre exact)")
@@ -97,8 +101,11 @@ def main():
     args = ap.parse_args()
 
     if args.fetch:
-        if not (args.api and args.token):
-            sys.exit("--fetch exige --api et --token")
+        import os
+        token = args.token or os.environ.get("ALBAJI_TOKEN") or (TOKEN_FILE.read_text().strip() if TOKEN_FILE.exists() else "")
+        if not token:
+            sys.exit("--fetch exige un jeton : --token, variable ALBAJI_TOKEN ou fichier attachments/token.txt")
+        args.token = token
         print("Récupération de la liste depuis l'API …")
         js = fetch_all(args.api, args.token, args.level)
         JSON_FILE.write_text(json.dumps(js, ensure_ascii=False, indent=1), encoding="utf-8")
