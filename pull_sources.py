@@ -110,7 +110,21 @@ def classify(url):
         return "aljam3", url          # accepté mais non traité : le même scan est atteint via turath
     if u.path.lower().endswith(".pdf"):
         return "pdf", url             # PDF direct -> OCR (pdf_to_md.py)
+    if "takw.in" in host:
+        return "matn_html", url       # métn saisi en HTML -> matn_html_to_md.py (sans OCR)
     return "unknown", url
+
+
+def process_matn_html(url, options, dry_run=False):
+    ouvrage = options.get("ouvrage") or urllib.parse.unquote(parse_qs(urlparse(url).query).get("matn", ["متن"])[0])
+    categorie = options.get("catégorie", options.get("categorie", "غير مصنف"))
+    cmd = [ROOT / "matn_html_to_md.py", url, "--categorie", categorie, "--ouvrage", ouvrage]
+    if dry_run:
+        print("  [dry-run]", " ".join(str(c) for c in cmd)); return None
+    res = run(cmd, capture_output=True, text=True)
+    print("  " + res.stdout.strip().replace("\n", "\n  "))
+    written = [l.split("->", 1)[1].strip() for l in res.stdout.splitlines() if "->" in l]
+    return Path(written[0]).parent if written else None
 
 
 def process_pdf(url, options, dry_run=False):
@@ -269,6 +283,8 @@ def main():
             books.append((ident, options))
         elif kind == "pdf":
             books.append((ident, {**options, "_pdf": True}))
+        elif kind == "matn_html":
+            books.append((ident, {**options, "_html": True}))
         elif kind == "aljam3":
             print(f"  (aljam3 ignoré : indiquer le lien turath du même livre) {url}")
         else:
@@ -289,7 +305,8 @@ def main():
     for ident, options in books:
         is_done = ("book", ident) in done
         if args.list:
-            print(f"{'fait   ' if is_done else 'nouveau'}  livre  {'pdf' if options.get('_pdf') else 'turath'} {ident}  { {k: v for k, v in options.items() if k != '_pdf'} }")
+            kind = 'pdf' if options.get('_pdf') else 'html' if options.get('_html') else 'turath'
+            print(f"{'fait   ' if is_done else 'nouveau'}  livre  {kind} {ident}  { {k: v for k, v in options.items() if not k.startswith('_')} }")
     if args.list:
         return
 
@@ -312,9 +329,10 @@ def main():
     new_books = [(i, o) for i, o in books if ("book", i) not in done or i in forced]
     print(f"\n{len(new_books)} livre(s) à convertir.")
     for ident, options in new_books:
-        print(f"\n=== livre {'pdf' if options.get('_pdf') else 'turath'} {ident}")
+        print(f"\n=== livre {'pdf' if options.get('_pdf') else 'html' if options.get('_html') else 'turath'} {ident}")
         try:
-            dest = (process_pdf if options.get("_pdf") else process_book)(ident, options, dry_run=args.dry_run)
+            fn = process_pdf if options.get("_pdf") else process_matn_html if options.get("_html") else process_book
+            dest = fn(ident, options, dry_run=args.dry_run)
             if dest is not None:
                 mark_done("book", ident, dest.relative_to(ROOT) if dest.is_absolute() else dest)
                 print(f"  -> {dest}")
