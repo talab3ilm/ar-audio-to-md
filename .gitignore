@@ -31,3 +31,6 @@ temp/
 
 # Cookies du navigateur pour les vidéos privées (jamais commités)
 /cookies.txt
+
+# PDF des cours téléchargés par get_attachments.py (lourds, régénérables)
+attachments/pdf/
