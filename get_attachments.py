@@ -33,6 +33,8 @@ JSON_FILE = ATT / "attachments.json"
 PDF_DIR = ATT / "pdf"
 INDEX = ATT / "index.tsv"
 UA = {"User-Agent": "Mozilla/5.0 (X11; Linux x86_64) ar-audio-to-md"}
+# en-têtes envoyés par l'application de la plateforme (vus dans l'onglet Réseau)
+API_HEADERS = {"x-tenant-key": "baji", "Origin": "https://dashboard.albajiacademy.com", "Referer": "https://dashboard.albajiacademy.com/"}
 
 
 def fetch_all(api, token, level, limit=100):
@@ -40,8 +42,8 @@ def fetch_all(api, token, level, limit=100):
     page, data, total = 1, [], None
     while True:
         url = f"{api.rstrip('/')}/attachments?level={level}&page={page}&limit={limit}"
-        req = urllib.request.Request(url, headers={**UA, "Authorization": f"Bearer {token}",
-                                                   "Content-Type": "application/json"})
+        req = urllib.request.Request(url, headers={**UA, **API_HEADERS, "Authorization": f"Bearer {token}",
+                                                   "Accept": "application/json"})
         with urllib.request.urlopen(req, timeout=60) as r:
             js = json.load(r)
         items = js.get("data") or []
