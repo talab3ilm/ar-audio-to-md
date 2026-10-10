@@ -35,6 +35,11 @@ else
 fi
 
 YTDLP_ARGS=(--extractor-args "youtube:player_client=android")
+# Vidéos privées ou réservées : exporter les cookies du navigateur connecté (extension
+# "Get cookies.txt LOCALLY") dans cookies.txt à côté de ce script ; il est ignoré par git.
+if [[ -f "$SCRIPT_DIR/cookies.txt" ]]; then
+    YTDLP_ARGS+=(--cookies "$SCRIPT_DIR/cookies.txt")
+fi
 
 # 1. Métadonnées : horodatage de diffusion, sinon de mise en ligne ("NA" si absent)
 read -r REL_TS UP_TS < <("$YTDLP" "${YTDLP_ARGS[@]}" --skip-download \

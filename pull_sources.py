@@ -30,6 +30,9 @@ RAW_YT = RAW / "youtube"
 RAW_PDF = RAW / "pdfs"
 
 YT_ID = re.compile(r"^[A-Za-z0-9_-]{11}$")
+COOKIES = ROOT / "cookies.txt"          # export du navigateur connecté, pour les vidéos privées (hors git)
+YTDLP_BASE = [str(VENV / "yt-dlp"), "--extractor-args", "youtube:player_client=android"] + \
+             (["--cookies", str(COOKIES)] if COOKIES.exists() else [])
 
 
 # ----------------------------------------------------------------------------- registre
@@ -126,8 +129,7 @@ def process_book(book_id, options, dry_run=False):
 def expand_list(url):
     """Playlist ou chaîne -> liste d'ids de vidéos (sans téléchargement)."""
     out = subprocess.run(
-        [str(VENV / "yt-dlp"), "--flat-playlist", "--print", "%(id)s", "--extractor-args",
-         "youtube:player_client=android", url],
+        YTDLP_BASE + ["--flat-playlist", "--print", "%(id)s", url],
         capture_output=True, text=True)
     ids = [l.strip() for l in out.stdout.splitlines() if YT_ID.match(l.strip())]
     if out.returncode != 0 and not ids:
@@ -167,7 +169,7 @@ def process_video(video_id, options, dry_run=False):
 
 def write_meta(dest, video_id, options):
     out = subprocess.run(
-        [str(VENV / "yt-dlp"), "--skip-download", "--extractor-args", "youtube:player_client=android",
+        YTDLP_BASE + ["--skip-download",
          "--print", "%(title)s\t%(channel)s\t%(channel_url)s\t%(duration)s\t%(release_timestamp,timestamp)s\t%(webpage_url)s",
          f"https://www.youtube.com/watch?v={video_id}"],
         capture_output=True, text=True)

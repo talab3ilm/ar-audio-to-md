@@ -28,3 +28,6 @@ docs/nextwork/*.html
 # Dossier de travail pour les livres (zip décompressé, essais)
 temp/
 !/sources.txt
+
+# Cookies du navigateur pour les vidéos privées (jamais commités)
+/cookies.txt
