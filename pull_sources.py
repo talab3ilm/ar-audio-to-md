@@ -134,20 +134,29 @@ def process_pdf(url, options, dry_run=False):
     ouvrage = options.get("ouvrage") or Path(name).stem
     categorie = options.get("catégorie", options.get("categorie", "غير مصنف"))
     dest = ROOT / "temp" / "pdf" / name
+    if not dry_run:
+        dest.parent.mkdir(parents=True, exist_ok=True)
+        if not dest.exists():
+            print(f"  téléchargement {name} …")
+            req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0 ar-audio-to-md"})
+            with urllib.request.urlopen(req, timeout=300) as r, open(dest, "wb") as f:
+                shutil.copyfileobj(r, f)
     poeme = options.get("poème", options.get("poeme", "")).lower() in ("oui", "yes", "1", "true")
     tool = "poem_ocr.py" if poeme else "pdf_to_md.py"     # poème sur deux colonnes -> Surya + réordonnancement
     cmd = [ROOT / tool, dest, "--categorie", categorie, "--ouvrage", ouvrage]
     if options.get("pages"):
         cmd += ["--pages", options["pages"]]
+    if not poeme and not dry_run and dest.exists():
+        # couche texte du PDF (si elle existe) comme second avis pour la réconciliation
+        ev = subprocess.run([str(ROOT / "pdf_text_layer.py"), str(dest), "--evaluer"], capture_output=True, text=True)
+        if ev.returncode == 0:
+            txt = dest.with_suffix(".txt")
+            subprocess.run([str(ROOT / "pdf_text_layer.py"), str(dest), "--out", str(txt)], check=True, capture_output=True)
+            cmd += ["--txt", str(txt)]
+            print(f"  couche texte utilisable : {ev.stdout.strip()}")
     if dry_run:
         print(f"  [dry-run] téléchargement {url} -> {dest.relative_to(ROOT)} puis", " ".join(str(c) for c in cmd))
         return None
-    dest.parent.mkdir(parents=True, exist_ok=True)
-    if not dest.exists():
-        print(f"  téléchargement {name} …")
-        req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0 ar-audio-to-md"})
-        with urllib.request.urlopen(req, timeout=300) as r, open(dest, "wb") as f:
-            shutil.copyfileobj(r, f)
     res = run(cmd, capture_output=True, text=True)
     print("  " + "\n  ".join(l for l in res.stdout.strip().splitlines() if not l.startswith("  page") and not l.startswith("$")))
     written = [l.split("->", 1)[1].strip() for l in res.stdout.splitlines() if "->" in l]
