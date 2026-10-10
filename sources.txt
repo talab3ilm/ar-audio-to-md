@@ -16,6 +16,8 @@
 #                                                  téléchargé automatiquement depuis le même fonds (Hugging Face)
 #   options :  | catégorie=<matière>  | ouvrage=<nom du dossier>  | pdf=oui   (copier aussi les PDF, hors git)
 #   Un lien aljam3.com est accepté mais ignoré : donner le lien turath du même livre.
+#   URL directe d'un PDF (hors turath) : OCR par pdf_to_md.py ; ajouter | poeme=oui pour un متن
+#   versifié sur deux colonnes (poem_ocr.py), et | pages=a-b pour limiter aux pages utiles.
 
 # --- Séances inaugurales (octobre 2026) ---
 https://youtu.be/mxWq9pEKBTs | matière=آداب طلب العلم
@@ -31,3 +33,5 @@ https://app.turath.io/book/133357 | catégorie=علوم القرآن | ouvrage=�
 https://app.turath.io/book/12031  | catégorie=التزكية والأخلاق
 https://app.turath.io/book/14249  | catégorie=الفقه | ouvrage=الدر الثمين والمورد المعين لميارة | pdf=oui
 https://app.turath.io/book/11371  | catégorie=النحو | ouvrage=متن الآجرومية | pdf=oui
+https://al3ilm.net/up/%D8%A7%D9%84%D8%A3%D8%B1%D8%AC%D9%88%D8%B2%D8%A9-%D8%A7%D9%84%D9%85%D9%8A%D8%A6%D9%8A%D8%A9.pdf | catégorie=السيرة النبوية | ouvrage=الأرجوزة المئية في ذكر حال أشرف البرية | pdf=oui | poeme=oui
+https://files.a-alqasim.com/books/mutoon/071102AlMeiyyahSeerahHawaashee.pdf | catégorie=السيرة النبوية | ouvrage=الأرجوزة المئية - طبعة القاسم بالحواشي | pdf=oui

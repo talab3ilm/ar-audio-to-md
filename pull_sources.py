@@ -15,8 +15,10 @@ import argparse
 import datetime as dt
 import os
 import re
+import shutil
 import subprocess
 import sys
+import urllib.request
 from pathlib import Path
 from urllib.parse import parse_qs, urlparse
 
@@ -106,7 +108,39 @@ def classify(url):
         return ("book", m.group(1)) if m else ("unknown", url)
     if "aljam3.com" in host:
         return "aljam3", url          # accepté mais non traité : le même scan est atteint via turath
+    if u.path.lower().endswith(".pdf"):
+        return "pdf", url             # PDF direct -> OCR (pdf_to_md.py)
     return "unknown", url
+
+
+def process_pdf(url, options, dry_run=False):
+    """PDF direct (hors turath) -> téléchargement dans temp/pdf/, puis pdf_to_md.py (OCR marker +
+    réconciliation locale, sans TXT de référence) -> raw/pdfs/<catégorie>/<ouvrage>/."""
+    name = urllib.parse.unquote(Path(urllib.parse.urlparse(url).path).name)
+    ouvrage = options.get("ouvrage") or Path(name).stem
+    categorie = options.get("catégorie", options.get("categorie", "غير مصنف"))
+    dest = ROOT / "temp" / "pdf" / name
+    poeme = options.get("poème", options.get("poeme", "")).lower() in ("oui", "yes", "1", "true")
+    tool = "poem_ocr.py" if poeme else "pdf_to_md.py"     # poème sur deux colonnes -> Surya + réordonnancement
+    cmd = [ROOT / tool, dest, "--categorie", categorie, "--ouvrage", ouvrage]
+    if options.get("pages"):
+        cmd += ["--pages", options["pages"]]
+    if dry_run:
+        print(f"  [dry-run] téléchargement {url} -> {dest.relative_to(ROOT)} puis", " ".join(str(c) for c in cmd))
+        return None
+    dest.parent.mkdir(parents=True, exist_ok=True)
+    if not dest.exists():
+        print(f"  téléchargement {name} …")
+        req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0 ar-audio-to-md"})
+        with urllib.request.urlopen(req, timeout=300) as r, open(dest, "wb") as f:
+            shutil.copyfileobj(r, f)
+    res = run(cmd, capture_output=True, text=True)
+    print("  " + "\n  ".join(l for l in res.stdout.strip().splitlines() if not l.startswith("  page") and not l.startswith("$")))
+    written = [l.split("->", 1)[1].strip() for l in res.stdout.splitlines() if "->" in l]
+    folder = Path(written[0]).parent if written else None
+    if folder and options.get("pdf", "").lower() in ("oui", "yes", "1", "true") and not (folder / name).exists():
+        shutil.copy2(dest, folder / name)
+    return folder
 
 
 def process_book(book_id, options, dry_run=False):
@@ -233,6 +267,8 @@ def main():
                 videos.append((vid, options, f"https://www.youtube.com/watch?v={vid}"))
         elif kind == "book":
             books.append((ident, options))
+        elif kind == "pdf":
+            books.append((ident, {**options, "_pdf": True}))
         elif kind == "aljam3":
             print(f"  (aljam3 ignoré : indiquer le lien turath du même livre) {url}")
         else:
@@ -253,7 +289,7 @@ def main():
     for ident, options in books:
         is_done = ("book", ident) in done
         if args.list:
-            print(f"{'fait   ' if is_done else 'nouveau'}  livre  turath {ident}  {options}")
+            print(f"{'fait   ' if is_done else 'nouveau'}  livre  {'pdf' if options.get('_pdf') else 'turath'} {ident}  { {k: v for k, v in options.items() if k != '_pdf'} }")
     if args.list:
         return
 
@@ -276,9 +312,9 @@ def main():
     new_books = [(i, o) for i, o in books if ("book", i) not in done or i in forced]
     print(f"\n{len(new_books)} livre(s) à convertir.")
     for ident, options in new_books:
-        print(f"\n=== livre turath {ident}")
+        print(f"\n=== livre {'pdf' if options.get('_pdf') else 'turath'} {ident}")
         try:
-            dest = process_book(ident, options, dry_run=args.dry_run)
+            dest = (process_pdf if options.get("_pdf") else process_book)(ident, options, dry_run=args.dry_run)
             if dest is not None:
                 mark_done("book", ident, dest.relative_to(ROOT) if dest.is_absolute() else dest)
                 print(f"  -> {dest}")
