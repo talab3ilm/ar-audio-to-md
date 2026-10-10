@@ -20,10 +20,10 @@ fi
 
 INPUT="$1"
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-YTDLP="$SCRIPT_DIR/.venv/bin/yt-dlp"
+YTDLP="$SCRIPT_DIR/ytdl.py"   # lanceur yt-dlp qui contourne le mode restreint imposé par le DNS
 
 if [[ ! -x "$YTDLP" ]]; then
-    echo "yt-dlp introuvable : lancez d'abord  $SCRIPT_DIR/.venv/bin/pip install yt-dlp" >&2
+    echo "yt-dlp introuvable : lancez d'abord  $SCRIPT_DIR/.venv/bin/pip install yt-dlp  (et vérifiez ytdl.py)" >&2
     exit 1
 fi
 

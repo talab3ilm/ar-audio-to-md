@@ -31,7 +31,8 @@ RAW_PDF = RAW / "pdfs"
 
 YT_ID = re.compile(r"^[A-Za-z0-9_-]{11}$")
 COOKIES = ROOT / "cookies.txt"          # export du navigateur connecté, pour les vidéos privées (hors git)
-YTDLP_BASE = [str(VENV / "yt-dlp"), "--extractor-args", "youtube:player_client=android"] + \
+# ytdl.py : yt-dlp sans le mode restreint imposé par le DNS du réseau
+YTDLP_BASE = [str(ROOT / "ytdl.py"), "--extractor-args", "youtube:player_client=android"] + \
              (["--cookies", str(COOKIES)] if COOKIES.exists() else [])
 
 
@@ -43,7 +44,7 @@ def load_done():
             if not line.strip() or line.startswith("#"):
                 continue
             parts = line.split("\t")
-            if len(parts) >= 3:
+            if len(parts) >= 3 and not (len(parts) >= 5 and parts[4].startswith("ERREUR")):
                 done[(parts[1], parts[2])] = parts
     return done
 
